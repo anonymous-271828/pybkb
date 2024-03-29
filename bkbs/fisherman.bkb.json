@@ -1,0 +1,393 @@
+{
+ "Name": "Fisherman",
+ "Instantiation Nodes": {
+  "(B) Has (access to) a (fishing) boat": [
+   "No",
+   "Yes"
+  ],
+  "(B) Fishing cost is ok": [
+   "No",
+   "Yes"
+  ],
+  "(B) Has fishing net": [
+   "No",
+   "Yes"
+  ],
+  "(G) Livelihood is fishing": [
+   "No",
+   "Yes"
+  ],
+  "(B) Fish supply is sufficient": [
+   "No",
+   "Yes"
+  ],
+  "(B) Fishing benefit is ok": [
+   "No",
+   "Yes"
+  ],
+  "(X) Seafaring skills": [
+   "No",
+   "Yes"
+  ],
+  "(B) Has fishing skills": [
+   "No",
+   "Yes"
+  ],
+  "(B) Has fishing equipment": [
+   "No",
+   "Yes"
+  ]
+ },
+ "Support Nodes": [
+  {
+   "Head": {
+    "(B) Has fishing net": "Yes"
+   },
+   "Probability": 0.99,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "No"
+   },
+   "Probability": 0.001,
+   "Tail": {
+    "(B) Has (access to) a (fishing) boat": "Yes",
+    "(B) Has fishing net": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "Yes"
+   },
+   "Probability": 0.25,
+   "Tail": {
+    "(B) Has (access to) a (fishing) boat": "No",
+    "(B) Has fishing net": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing cost is ok": "Yes"
+   },
+   "Probability": 0.7,
+   "Tail": {
+    "(B) Has fishing skills": "No",
+    "(B) Has fishing equipment": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is fishing": "No"
+   },
+   "Probability": 0.2,
+   "Tail": {
+    "(B) Fishing cost is ok": "Yes",
+    "(B) Fishing benefit is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is fishing": "Yes"
+   },
+   "Probability": 0.8,
+   "Tail": {
+    "(B) Fishing cost is ok": "Yes",
+    "(B) Fishing benefit is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing cost is ok": "No"
+   },
+   "Probability": 0.999,
+   "Tail": {
+    "(B) Has fishing skills": "No",
+    "(B) Has fishing equipment": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "No"
+   },
+   "Probability": 0.25,
+   "Tail": {
+    "(B) Has (access to) a (fishing) boat": "Yes",
+    "(B) Has fishing net": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing benefit is ok": "Yes"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "(B) Fish supply is sufficient": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "Yes"
+   },
+   "Probability": 0.999,
+   "Tail": {
+    "(B) Has (access to) a (fishing) boat": "Yes",
+    "(B) Has fishing net": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is fishing": "Yes"
+   },
+   "Probability": 0.4,
+   "Tail": {
+    "(B) Fishing cost is ok": "No",
+    "(B) Fishing benefit is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing benefit is ok": "Yes"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "(B) Fish supply is sufficient": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing net": "No"
+   },
+   "Probability": 0.01,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(X) Seafaring skills": "No"
+   },
+   "Probability": 0.001,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(G) Livelihood is fishing": "No"
+   },
+   "Probability": 0.001,
+   "Tail": {
+    "(B) Fishing cost is ok": "Yes",
+    "(B) Fishing benefit is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has (access to) a (fishing) boat": "Yes"
+   },
+   "Probability": 0.99,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Fishing cost is ok": "Yes"
+   },
+   "Probability": 0.001,
+   "Tail": {
+    "(B) Has fishing skills": "No",
+    "(B) Has fishing equipment": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing cost is ok": "No"
+   },
+   "Probability": 0.001,
+   "Tail": {
+    "(B) Has fishing skills": "Yes",
+    "(B) Has fishing equipment": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fish supply is sufficient": "Yes"
+   },
+   "Probability": 0.97,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Fishing cost is ok": "No"
+   },
+   "Probability": 0.3,
+   "Tail": {
+    "(B) Has fishing skills": "No",
+    "(B) Has fishing equipment": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is fishing": "No"
+   },
+   "Probability": 0.9,
+   "Tail": {
+    "(B) Fishing cost is ok": "No",
+    "(B) Fishing benefit is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fish supply is sufficient": "No"
+   },
+   "Probability": 0.03,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(G) Livelihood is fishing": "Yes"
+   },
+   "Probability": 0.999,
+   "Tail": {
+    "(B) Fishing cost is ok": "Yes",
+    "(B) Fishing benefit is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(X) Seafaring skills": "Yes"
+   },
+   "Probability": 0.999,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "No"
+   },
+   "Probability": 0.999,
+   "Tail": {
+    "(B) Has (access to) a (fishing) boat": "No",
+    "(B) Has fishing net": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing cost is ok": "Yes"
+   },
+   "Probability": 0.999,
+   "Tail": {
+    "(B) Has fishing skills": "Yes",
+    "(B) Has fishing equipment": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing cost is ok": "No"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "(B) Has fishing skills": "Yes",
+    "(B) Has fishing equipment": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "No"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "(B) Has (access to) a (fishing) boat": "No",
+    "(B) Has fishing net": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing benefit is ok": "No"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "(B) Fish supply is sufficient": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "Yes"
+   },
+   "Probability": 0.001,
+   "Tail": {
+    "(B) Has (access to) a (fishing) boat": "No",
+    "(B) Has fishing net": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing benefit is ok": "No"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "(B) Fish supply is sufficient": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing skills": "Yes"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "(X) Seafaring skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has (access to) a (fishing) boat": "No"
+   },
+   "Probability": 0.01,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(G) Livelihood is fishing": "No"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "(B) Fishing cost is ok": "No",
+    "(B) Fishing benefit is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing cost is ok": "Yes"
+   },
+   "Probability": 0.4,
+   "Tail": {
+    "(B) Has fishing skills": "Yes",
+    "(B) Has fishing equipment": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "Yes"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "(B) Has (access to) a (fishing) boat": "Yes",
+    "(B) Has fishing net": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing skills": "No"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "(X) Seafaring skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is fishing": "Yes"
+   },
+   "Probability": 0.1,
+   "Tail": {
+    "(B) Fishing cost is ok": "No",
+    "(B) Fishing benefit is ok": "No"
+   }
+  }
+ ]
+}

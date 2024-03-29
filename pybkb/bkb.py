@@ -5,11 +5,10 @@ import json
 import uuid
 import compress_pickle
 import itertools
-import math
-import tqdm
 import numpy as np
-from scipy.sparse import dok_array, vstack, hstack
+from scipy.sparse import dok_array
 from collections import defaultdict
+from tqdm import tqdm
 
 from pybkb.exceptions import *
 from pybkb.scores import *
@@ -17,54 +16,48 @@ from pybkb.utils.probability import build_probability_store
 from pybkb.utils import make_hash_sha256
 from pybkb.mixins.networkx import BKBNetworkXMixin
 
+
 class BKB(BKBNetworkXMixin):
-    def __init__(
-            self,
-            name:str=None,
-            description:str=None,
-            sparse_array_format:str='dok',
-            ) -> None:
-        """ The Bayesian Knowledge Base class.
+    """
+    Represents a Bayesian Knowledge Base (BKB) with methods for constructing and manipulating the structure.
 
-        Kwargs:
-            :param name: Name of the BKB. If None, will assign a random ID to the BKB.
-            :type name: str
+    The BKB is composed of instantiation nodes (I-nodes) that represent possible states of components in the knowledge base, and support nodes (S-nodes) that represent probabilistic dependencies between these states.
 
-        Attributes:
-            :param adj: The BKB adjacency matrix. Upon BKB build completion, it is a 3-dimensional array
-                such that dims 0 and 1 form a N x N matrix where N is number of I-nodes in the BKB, and 
-                each 2-d plane (2-dim) is a BKB S-node adjacency matrix where a single non-zero element 
-                on the diagonol represents the head of the S-node and all other non-zero elements form the
-                S-node tail. Each S-node matrix is symmetric for added utilty later.
-            :type adj: numpy.ndarray
-            :param inodes: An N x 2 array representing all the I-nodes in the BKB.
-            :type inodes: numpy.ndarray
-            :param inodes_map: A dictionary with components as keys and associated component states as values.
-            :type inodes_map: dict
-            :param inodes_indices_map: A map from I-node tuple space to index in the inodes attribute. Used for speed.
-            :type inodes_indices_map: dict
-            :param snode_probs: A list of S-node probabilities matching the 2-d index of the adjacency matrix.
-            :type snode_probs: list
+    :param name: Optional. A name for the BKB. If not provided, a UUID is generated.
+    :param description: Optional. A description of the BKB's purpose or contents.
+    :param sparse_array_format: The format for representing sparse arrays within the BKB. Defaults to 'dok' (Dictionary Of Keys format). Currently, only 'dok' is implemented.
+    :type name: str, optional
+    :type description: str, optional
+    :type sparse_array_format: str, optional
+    :raises ValueError: If an unsupported sparse array format is specified.
+    """
+
+    def __init__(self, name: str = None, description: str = None, sparse_array_format: str = 'dok') -> None:
+        """
+        Initializes a new Bayesian Knowledge Base (BKB) with optional configuration for its name, description, and the format for sparse arrays.
+
+        This method sets up the initial structure of the BKB, including the adjacency matrices for I-nodes and S-nodes and various mappings and lists for managing these nodes.
         """
         if name is None:
-            name = str(uuid.uuid4())
+            name = str(uuid.uuid4())  # Assign a unique identifier if no name is provided.
         self.name = name
-        self.description = description
-        self.head_adj = None
-        self.tail_adj = None
-        self.inodes = None
-        self.inodes_map = defaultdict(list)
-        self.inodes_indices_map = {}
-        self.snode_probs = None
-        self._snodes = None
+        self.description = description  # Description of the BKB, useful for documentation purposes.
+
+        # Initialize structures for managing I-nodes and S-nodes within the BKB.
+        self.head_adj = None  # Adjacency matrix for S-node heads.
+        self.tail_adj = None  # Adjacency matrix for S-node tails.
+        self.inodes = None  # List of I-nodes (instantiation nodes).
+        self.inodes_map = defaultdict(list)  # Maps component names to their states.
+        self.inodes_indices_map = {}  # Maps I-nodes to their indices for quick lookup.
+        self.snode_probs = []  # List of probabilities associated with each S-node.
+        self._snodes = []  # Internal representation of S-nodes for efficient access.
+        self.sparse_array_format = sparse_array_format # Set the sparse array representation format.
+
+        # Set the sparse array representation format.
         if sparse_array_format == 'dok':
-            self.sparse_array_obj = dok_array
-        elif sparse_array_format == 'csr':
-            raise NotImplementedError('Have not implemented CSR matrices, use dok.')
-        elif sparse_array_format == 'lil':
-            raise NotImplementedError('Have not implemented LiL matrices, use dok.')
+            self.sparse_array_obj = dok_array  # Use DOK format by default for sparse arrays.
         else:
-            raise ValueError(f'Unknown sparse array format: {sparse_array_format}.')
+            raise ValueError(f"Unsupported sparse array format '{sparse_array_format}'. Only 'dok' is currently implemented.")
 
     def re_annotate_features(self, annotation_map, append=True):
         """ Will append or replace RV names with new names based on annotation_map.
@@ -92,101 +85,133 @@ class BKB(BKBNetworkXMixin):
                 # Update the inodes indices map
                 self.inodes_indices_map[new_inode] = inode_idx
 
-    def save(self, filepath:str, compression:str='lz4') -> None:
-        """ Method to save BKB via compress pickle.
+    def save(self, filepath: str, compression: str = 'lz4') -> None:
+            """
+            Saves the BKB to a file using compressible serialization.
 
-        Args:
-            :param filepath: Filepath to save BKB.
+            This method serializes the current state of the BKB into a compressed file, which can be reloaded later.
+
+            :param filepath: The file path where the BKB should be saved.
+            :param compression: The compression method to use. Defaults to 'lz4' for fast compression.
             :type filepath: str
+            :type compression: str
+            """
+            with open(filepath, 'wb') as bkb_file:
+                compress_pickle.dump(self.dumps(), bkb_file, compression=compression)
+
+    def dumps(self, to_numpy: bool = False):
+            """
+            Serializes the BKB into a tuple of its constituent components.
+
+            Optionally converts adjacency matrices to dense NumPy arrays for serialization.
+
+            :param to_numpy: If True, converts adjacency matrices to dense NumPy arrays. Defaults to False.
+            :type to_numpy: bool
+            :return: A tuple containing the serialized components of the BKB.
+            :rtype: tuple
+            """
+            if to_numpy:
+                return (self.name, self.description, self.head_adj.toarray(), self.tail_adj.toarray(), self.inodes, np.array(self.snode_probs))
+            return (self.name, self.description, self.head_adj, self.tail_adj, self.inodes, self.snode_probs)
+
+    def _rebuild_internal_structures(self):
+        """
+        Rebuilds internal mappings and structures from the deserialized data.
+
+        This method reconstructs the `inodes_map`, `inodes_indices_map`, and S-nodes representations
+        to ensure efficient operation of the BKB object after loading. It is called during the
+        deserialization process.
+        """
+        # Rebuild inodes_map and inodes_indices_map based on loaded inodes
+        self.inodes_map = defaultdict(list)
+        self.inodes_indices_map = {}
+        for idx, (component_name, state_name) in enumerate(self.inodes):
+            self.inodes_map[component_name].append(state_name)
+            self.inodes_indices_map[(component_name, state_name)] = idx
         
-        Kwargs:
-            :param compression: Type of compression compress pickle should use.
-                See compress pickle documentation for options.
-            :type compressoin: str
-        """
-        with open(filepath, 'wb') as bkb_file:
-            compress_pickle.dump(self.dumps(), bkb_file, compression=compression)
-        return
-
-    def dumps(self, to_numpy:bool=False):
-        """ Dumps the BKB in a tuple of associated numpy arrays.
-        """
-        if to_numpy:
-            return self.name, self.description, self.head_adj.toarray(), self.tail_adj.toarray(), self.inodes, np.array(self.snode_probs)
-        return self.name, self.description, self.head_adj, self.tail_adj, self.inodes, self.snode_probs
-
-    def _load_snodes(self):
-        """ Loads S-nodes into an efficient structure. Has a performance hit due
-            to looking up indices in the adjacency matrices.
-        """
+        # Reconstruct the _snodes list for efficient S-node access
         self._snodes = []
         for snode_index, snode_prob in enumerate(self.snode_probs):
-            # Get head I-node from top right outgoing S-node adj (np.array(rows_coords), np.array(cols_coords))
-            head_idx = self.head_adj[:,[snode_index]].nonzero()[0][0]
-            # Get tail indices from bottom left incoming S-node adj
+            # Determine the head I-node of the S-node
+            head_idx = self.head_adj[:, [snode_index]].nonzero()[0][0]
+            # Identify tail I-nodes for the S-node
             tail_indices = self.tail_adj[[snode_index], :].nonzero()[1]
-            self._snodes.append((head_idx, snode_prob, tail_indices))
+            # Add the S-node to the _snodes list with its head index, probability, and tail indices
+            self._snodes.append((head_idx, snode_prob, tail_indices)) 
 
     @classmethod
-    def loads(cls, bkb_obj, sparse_array_format:str='dok'):
-        # Cast as a list
-        bkb_obj = list(bkb_obj)
-        # Check if there is a description attribute saved
-        if len(bkb_obj) == 6:
-            description = bkb_obj.pop(1)
-        else:
-            description=None
-        bkb = cls(
-                name=bkb_obj[0],
-                description=description,
-                sparse_array_format=sparse_array_format
-                )
-        bkb.head_adj = bkb.sparse_array_obj(bkb_obj[1])
-        bkb.tail_adj = bkb.sparse_array_obj(bkb_obj[2])
-        bkb.inodes = bkb_obj[3]
-        bkb.snode_probs = list(bkb_obj[4])
-        # Construct inode maps
-        inodes_map = defaultdict(list)
-        inodes_indices_map = {}
-        for idx, inode in enumerate(bkb.inodes):
-           inodes_map[inode[0]].append(inode[1])
-           # Gonna be the reverse order
-           inodes_indices_map[tuple(inode)] = idx
-        bkb.inodes_map = inodes_map
-        bkb.inodes_indices_map = inodes_indices_map
-        # Load efficient snode internal structure
-        bkb._load_snodes()
+    def loads(cls, bkb_obj, sparse_array_format: str = 'dok'):
+        """
+        Deserializes a BKB from its serialized tuple form into a BKB object.
+
+        This class method reconstructs a BKB object from the tuple produced by the `dumps` method.
+
+        :param bkb_obj: The serialized tuple containing the BKB components.
+        :param sparse_array_format: The format of sparse arrays to be used in the deserialized BKB. Defaults to 'dok'.
+        :type bkb_obj: tuple
+        :type sparse_array_format: str
+        :return: A BKB object reconstructed from the serialized data.
+        :rtype: BKB
+        """
+        # Initialize an empty BKB with provided name and description
+        name, description = bkb_obj[:2]
+        bkb = cls(name=name, description=description, sparse_array_format=sparse_array_format)
+        
+        # Reconstruct the adjacency matrices and node lists from the serialized object
+        bkb.head_adj, bkb.tail_adj, bkb.inodes, snode_probs = bkb_obj[2:]
+        bkb.snode_probs = list(snode_probs)
+        
+        # Rebuild internal mappings for quick node lookups
+        bkb._rebuild_internal_structures()
         return bkb
 
     @classmethod
-    def load(cls, filepath:str, compression:str='lz4', sparse_array_format:str='dok'):
-        """ A class method to load a BKB that was saved via compress_pickle using the BKB.save() method.
+    def load(cls, filepath: str, compression: str = 'lz4', sparse_array_format: str = 'dok'):
+        """
+        Loads a BKB from a file created by the `save` method.
 
-        Args:
-            :param filepath: Filepath from which to load the BKB compress pickle file.
-            :type filepath: str
+        This class method deserializes a BKB object from a file, reconstructing its state.
 
-        Kwargs:
-            :param compression: Type of compression that was used to save the BKB.
-            :type compression: str
+        :param filepath: The file path from which to load the BKB.
+        :param compression: The compression method used when the file was saved. Defaults to 'lz4'.
+        :param sparse_array_format: The format of sparse arrays in the loaded BKB. Defaults to 'dok'.
+        :type filepath: str
+        :type compression: str
+        :type sparse_array_format: str
+        :return: A deserialized BKB object.
+        :rtype: BKB
         """
         with open(filepath, 'rb') as bkb_file:
-            return cls.loads(compress_pickle.load(bkb_file, compression=compression), sparse_array_format)
+            bkb_tuple = compress_pickle.load(bkb_file, compression=compression)
+        return cls.loads(bkb_tuple, sparse_array_format=sparse_array_format)
+    
+    def get_snode_head(self, snode_index: int) -> tuple:
+        """
+        Retrieves the head I-node of a specified S-node.
 
-    def get_snode_head(self, snode_index:int) -> tuple:
-        # Get head I-node from top right outgoing S-node adj (np.array(rows_coords), np.array(cols_coords))
+        The head of an S-node is the I-node that the S-node is asserting a probability for, given its tail.
+
+        :param snode_index: The index of the S-node whose head is to be retrieved.
+        :type snode_index: int
+        :return: A tuple representing the head I-node, in the form (component_name, state_name).
+        :rtype: tuple
+        """
         head_idx = self._snodes[snode_index][0]
-        return tuple(self.inodes[head_idx])
+        return self.inodes[head_idx]
 
-    def get_snode_tail(self, snode_index:int) -> list:
-        tail = []
-        # Get tail indices from bottom left incoming S-node adj
+    def get_snode_tail(self, snode_index: int) -> list:
+        """
+        Retrieves the tail I-nodes of a specified S-node.
+
+        The tail of an S-node consists of I-nodes that, when instantiated, influence the probability of the head I-node's state.
+
+        :param snode_index: The index of the S-node whose tail is to be retrieved.
+        :type snode_index: int
+        :return: A list of tuples representing the tail I-nodes, each in the form (component_name, state_name).
+        :rtype: list
+        """
         tail_indices = self._snodes[snode_index][2]
-        # Get Tail I-nodes
-        if tail_indices is not None:
-            for tail_idx in tail_indices:
-                tail.append(tuple(self.inodes[tail_idx]))
-        return tail
+        return [self.inodes[tail_idx] for tail_idx in tail_indices]
 
     def score(
             self,
@@ -285,398 +310,485 @@ class BKB(BKBNetworkXMixin):
             return data_score, model_score
         raise ValueError('Unknown value for only')
 
-    def _snode_to_dict(self, snode_idx:int, prob:float, make_json_serializable:bool=True) -> dict:
-        """ Internal method used to form a S-node dictionary representation.
+    def _snode_to_dict(self, snode_index: int, prob: float, make_json_serializable: bool = True) -> dict:
         """
-        snode_dict = {}
-        head_comp, head_state = self.get_snode_head(snode_idx)
-        if make_json_serializable and type(head_state) == frozenset:
-            head_state = str(set(head_state))
-        snode_dict["Head"] = {head_comp: head_state}
-        snode_dict["Probability"] = prob
-        tail = self.get_snode_tail(snode_idx)
-        # Convert tail list to  dict
-        tail_dict = {}
-        for feature, state in tail:
-            if make_json_serializable and type(state) == frozenset:
-                state = str(set(state))
-            tail_dict[feature] = state
-        snode_dict["Tail"] = tail_dict
-        return snode_dict
+        Helper method to convert a single S-node to a dictionary representation.
 
-    def _snodes_to_list(self, make_json_serializable:bool=True) -> list:
-        """ Internal method used to gather S-node dictionary representations.
+        :param snode_index: The index of the S-node in the BKB.
+        :param prob: The probability of the S-node.
+        :param make_json_serializable: If True, converts non-serializable elements (e.g., frozenset) to a serializable format.
+        :return: A dictionary representing the S-node, including its head, tail, and probability.
+        :rtype: dict
+        """
+        snode_dict = {"Probability": prob}
+        head = self.get_snode_head(snode_index)
+        tail = self.get_snode_tail(snode_index)
+
+        snode_dict["Head"] = {head[0]: head[1]}
+        snode_dict["Tail"] = {feature: state for feature, state in tail}
+
+        if make_json_serializable:
+            for key in ("Head", "Tail"):
+                for feature, state in snode_dict[key].items():
+                    if isinstance(state, frozenset):
+                        snode_dict[key][feature] = str(set(state))  # Convert frozenset to set and then to string
+
+        return snode_dict
+    
+    def _snodes_to_list(self, make_json_serializable: bool = True) -> list:
+        """
+        Helper method to convert S-nodes to a list of dictionaries, each representing an S-node.
+
+        :param make_json_serializable: Ensures all elements are JSON serializable by converting incompatible types to strings. Defaults to True.
+        :return: A list of dictionaries, each representing an S-node with its head, tail, and probability.
+        :rtype: list
         """
         snodes_list = []
-        for idx, prob in enumerate(self.snode_probs):
-            snodes_list.append(self._snode_to_dict(idx, prob, make_json_serializable))
+        for snode_index in range(len(self.snode_probs)):
+            snode_dict = self._snode_to_dict(snode_index, self.snode_probs[snode_index], make_json_serializable)
+            snodes_list.append(snode_dict)
         return snodes_list
-                        
-    def to_dict(self, make_json_serializable:bool=True) -> dict:
-        """ Method that transformers BKB to dictionary object.
+
+    def to_dict(self, make_json_serializable: bool = True) -> dict:
         """
+        Converts the BKB to a dictionary representation, suitable for serialization or conversion to JSON.
+
+        :param make_json_serializable: If True, ensures that all elements of the dictionary are JSON serializable by converting incompatible types (e.g., sets) to strings. Defaults to True.
+        :return: A dictionary representation of the BKB, including its name, description, instantiation nodes (I-nodes), and support nodes (S-nodes) along with their probabilities.
+        :rtype: dict
+        """
+        # Convert S-nodes to list of dictionaries for easy JSON serialization
         snodes_list = self._snodes_to_list(make_json_serializable)
-        if make_json_serializable:
-            inodes = defaultdict(list)
-            for feature, states in self.inodes_map.items():
-                for state in states:
-                    if type(state) == frozenset:
-                        state = str(set(state))
-                    inodes[feature].append(state)
-            inodes = dict(inodes)
-        else:
-            inodes = dict(self.inodes_map)
+        
+        # Prepare instantiation nodes (I-nodes) for serialization
+        inodes = {
+            feature: [str(state) if make_json_serializable and isinstance(state, frozenset) else state
+                      for state in states]
+            for feature, states in self.inodes_map.items()
+        }
+
         return {
-                "Name": self.name,
-                "Description": self.description,
-                "Instatiation Nodes": inodes,
-                "Support Nodes": snodes_list,
-                }
+            "Name": self.name,
+            "Description": self.description,
+            "Instantiation Nodes": inodes,
+            "Support Nodes": snodes_list,
+        }
 
-    def json(self, indent:int=2) -> str:
-        """ Builds a JSON BKB object.
+    def json(self, indent: int = 2) -> str:
+        """
+        Converts the BKB to a JSON string, using the dictionary representation from `to_dict`.
 
-        Kwargs:
-            :param indent: Amount of indent to use in the json formatting.
-            :type indent: int
+        :param indent: The indentation level for the JSON output. Defaults to 2 for pretty printing.
+        :return: A JSON string representation of the BKB.
+        :rtype: str
         """
         bkb_dict = self.to_dict()
         return json.dumps(bkb_dict, indent=indent)
-    
-    @property
-    def source_features(self):
-        src_features = []
-        for feature in self.inodes_map:
-            if '__Source__' in feature:
-                src_features.append(feature)
-        return src_features
-    
+
+    def save_to_json(self, file_path, indent=4):
+            """
+            Serializes the BKB instance to a JSON file.
+
+            :param file_path: The path to the file where the JSON will be saved.
+            :type file_path: str
+            """
+            bkb_dict = self.to_dict()
+            with open(file_path, 'w') as json_file:
+                json.dump(bkb_dict, json_file, indent=indent)
+
+    @classmethod
+    def load_from_json(cls, file_path):
+        """
+        Loads a BKB from a JSON file.
+
+        :param file_path: Path to the JSON file containing the BKB data.
+        :type file_path: str
+        :return: A new instance of BKB populated with the data from the JSON file.
+        :rtype: BKB
+        """
+        with open(file_path, 'r') as json_file:
+            data = json.load(json_file)
+        # Assuming the JSON structure directly mirrors the BKB structure
+        bkb = cls(data.get('Name'), data.get('Description', None))
+        
+        for component, states in data.get('Instantiation Nodes', {}).items():
+            for state in states:
+                bkb.add_inode(component, state)
+        
+        for snode in data.get('Support Nodes', []):
+            head = snode['Head']
+            head_component, head_state = list(head.items())[0]
+            prob = snode['Probability']
+            tail = []
+            for tail_component, tail_state in snode.get('Tail', {}).items():
+                tail.append((tail_component, tail_state))
+            bkb.add_snode(head_component, head_state, prob, tail)
+        
+        return bkb
+
     @property
     def source_inodes(self):
-        src_inodes = []
-        for feature, states in self.inodes_map.items():
-            if '__Source__' in feature:
-                for state in states:
-                    src_inodes.append((feature, state))
-        return src_inodes
+        """
+        A list of source I-nodes in the BKB.
+
+        Source I-nodes are identified by the presence of '__Source__' in their feature name.
+
+        :return: A list of tuples representing source I-nodes, each tuple in the form (feature, state).
+        :rtype: list
+        """
+        return [(feature, state) for feature, states in self.inodes_map.items() if '__Source__' in feature for state in states]
+    
+    @property
+    def non_source_inodes(self):
+        """
+        A list of non-source I-nodes in the BKB.
+
+        Non-source I-nodes are identified by the absence of '__Source__' in their feature name.
+
+        :return: A list of tuples representing non-source I-nodes, each tuple in the form (feature, state).
+        :rtype: list
+        """
+        return [(feature, state) for feature, states in self.inodes_map.items() if '__Source__' not in feature for state in states]
 
     @property
     def non_source_features(self):
-        nonsrc_features = []
-        for feature in self.inodes_map:
-            if '__Source__' in feature:
-                continue
-            nonsrc_features.append(feature)
-        return nonsrc_features
+        """
+        A list of features in the BKB that are not source features.
 
+        Non-source features are identified by the absence of '__Source__' in their name.
+
+        :return: A list of feature names that are not associated with source I-nodes.
+        :rtype: list
+        """
+        return [feature for feature in self.inodes_map if '__Source__' not in feature]
+    
     @property
-    def non_source_inodes(self):
-        nonsrc_inodes = []
-        for feature, states in self.inodes_map.items():
-            if '__Source__' in feature:
-                continue
-            for state in states:
-                nonsrc_inodes.append((feature, state))
-        return nonsrc_inodes
-            
+    def source_features(self):
+        """
+        A list of source features in the BKB.
+
+        Source features are identified by the presence of '__Source__' in their name, indicating that they are associated with source I-nodes.
+
+        :return: A list of feature names that are considered source features.
+        :rtype: list
+        """
+        return [feature for feature in self.inodes_map if '__Source__' in feature]
+    
+    def _ensure_adjacency_matrices_initialized(self):
+        """
+        Ensures that the head and tail adjacency matrices are initialized. If they are not,
+        initializes them as empty DOK matrices.
+        """
+        if self.head_adj is None:
+            self.head_adj = self.sparse_array_obj((0, 0), dtype=float)
+        if self.tail_adj is None:
+            self.tail_adj = self.sparse_array_obj((0, 0), dtype=float)
+
     def _add_inode_to_adj(self) -> None:
-        """ Internal method that adds I-node rows to the BKBs adjacency matrix.
         """
-        if self.head_adj is not None and self.tail_adj is not None:
-            # Pad to both head and tail adjacencies
-            # Append zeros row to head adjacency (hacked by just changing the shape of the sparse matrix)
-            self.head_adj._shape = (self.head_adj.shape[0] + 1, self.head_adj.shape[1])
-            # Append zeros column to tail adjacency (hacked by just changing the shape of the sparse matrix)
-            self.tail_adj._shape = (self.tail_adj.shape[0], self.tail_adj.shape[1] + 1)
-        return
+        Expands the BKB's adjacency matrices to accommodate a new I-node.
 
-    def add_inode(self, component_name:str, state_name) -> None:
-        """ Function to add I-node to BKB.
-
-        Args:
-            :param component_name: Name of the I-nodes component (feature) that should be added.
-            :type component_name: str, int
-            :param state_name: Name of the I-node's state (feature state) that should be added.
-            :type state_name: str, int, frozenset
+        This internal method adds a row to the head adjacency matrix and a column to the tail
+        adjacency matrix, ensuring space for the new I-node's connections.
         """
-        # Define I-node tuple
+        self._ensure_adjacency_matrices_initialized()
+        # Expand head adjacency by adding a row.
+        self.head_adj.resize((self.head_adj.shape[0] + 1, self.head_adj.shape[1]))
+        # Expand tail adjacency by adding a column.
+        self.tail_adj.resize((self.tail_adj.shape[0], self.tail_adj.shape[1] + 1))
+
+    def _get_inode_index(self, component_name: str, state_name) -> int:
+        """
+        Retrieves the index of an I-node within the adjacency matrix.
+
+        This method translates the insertion index of an I-node to its actual index in the adjacency matrix.
+
+        :param component_name: The name of the I-node's component (feature).
+        :param state_name: The name of the I-node's state (feature state).
+        :return: The index of the I-node within the adjacency matrix.
+        :raises NoINodeError: If the specified I-node does not exist.
+        """
+        inode_index = self.inodes_indices_map.get((component_name, state_name))
+        if inode_index is None:
+            raise NoINodeError(component_name, state_name)
+        return inode_index
+    
+    def add_inode(self, component_name: str, state_name) -> None:
+        """
+        Adds an I-node to the BKB.
+
+        If the I-node (component_name, state_name) already exists, this method does nothing.
+        Otherwise, it adds the new I-node and updates the adjacency matrices to accommodate it.
+
+        :param component_name: The name of the I-node's component (feature).
+        :param state_name: The name of the I-node's state (feature state).
+        """
         inode_tup = (component_name, state_name)
-        if self.inodes_map:
-            # Check if inode already exists and raise error if it is.
-            comp_states = self.inodes_map.get(component_name, None)
-            if comp_states:
-                if state_name in comp_states:
-                    return
-        if self.inodes is None:
-            # Create inodes list  and add in inode
-            self.inodes = [inode_tup]
-        else:
-            self.inodes.append(inode_tup)
-        # Add to inode maps
+        # If I-node already exists, do nothing.
+        if state_name in self.inodes_map.get(component_name, []):
+            return
+        # Otherwise, add the new I-node.
+        self.inodes = self.inodes or []
+        self.inodes.append(inode_tup)
         self.inodes_map[component_name].append(state_name)
         self.inodes_indices_map[inode_tup] = len(self.inodes) - 1
-        # Update adjacency matrix
+        # Update adjacency matrices to accommodate the new I-node.
         self._add_inode_to_adj()
-        return
-
-    def _get_inode_index(self, component_name:str, state_name) -> int:
-        """ Helper function to retrieve true I-node index as it is in the adjacency matrix.
-
-        Remember that I-nodes are stacked on top of the adj matrix and S-nodes are appended to the bottom,
-        and the inodes_indices_map is the insertion index, not the actual index in the adj. 
-        Therefore, this method converts the index to the true index.
+    
+    def _check_snode(self, target_component_name: str, target_state_name, prob: float, tail: list, ignore_prob: bool = False) -> tuple:
         """
-        map_idx = self.inodes_indices_map.get((component_name, state_name), None)
-        if map_idx is None:
-            raise NoINodeError(component_name, state_name)
-        return map_idx
+        Checks an S-node for validity and translates I-node names into indices.
 
-    def _check_snode(self,
-            target_componet_name:str,
-            target_state_name,
-            prob:float,
-            tail:list,
-            ignore_prob:bool=False,
-            ) -> True:
-        """ Interal method to check S-node for validity and to translate i-node names into indices.
+        Validates the probability value (unless ignored), retrieves the index for the head I-node, and 
+        translates tail I-node names into indices.
+
+        :param target_component_name: Name of the S-node's head I-node's component.
+        :param target_state_name: State of the S-node's head I-node.
+        :param prob: Probability associated with the S-node.
+        :param tail: List of tuples representing the S-node's tail I-nodes.
+        :param ignore_prob: If True, does not validate the probability value.
+        :return: A tuple containing the head index, probability, and list of tail indices.
+        :raises SNodeProbError: If the probability is invalid and not ignored.
         """
-        if not ignore_prob:
-            if prob > 1 or prob < 0:
-                raise SNodeProbError(prob)
-        head_idx = self._get_inode_index(target_componet_name, target_state_name)
-        if tail:
-            tail_indices = []
-            for comp_name, state_name in tail:
-                tail_idx = self._get_inode_index(comp_name, state_name)
-                if tail_idx is None:
-                    raise NoINodeError(comp_name, state_name)
-                tail_indices.append(tail_idx)
-        else:
-            tail_indices = None
+        if not ignore_prob and not (0 <= prob <= 1):
+            raise SNodeProbError(prob)
+
+        head_idx = self._get_inode_index(target_component_name, target_state_name)
+        tail_indices = [self._get_inode_index(comp_name, state_name) for comp_name, state_name in tail] if tail else []
+
         return head_idx, prob, tail_indices
 
-    def add_snode(
-            self,
-            target_componet_name:str,
-            target_state_name,
-            prob:float,
-            tail:list=None,
-            ignore_prob:bool=False,
-            ) -> None:
-        """ Method to add a Support Node (S-node) to the BKB.
-
-        Args:
-            :param target_componet_name: Name of the S-node's head I-node's component (feature).
-            :type target_componet_name: str, int
-            :param target_state_name: Name of the S-node's head I-node's component state (feature state).
-            :type target_state_name: str, int, frozenset
-            :param prob: The probability associated with the S-node.
-            :type prob: float
-
-        Kwargs:
-            :param tail: An optional list of the S-nodes tail I-nodes formed as a list of tuples
-                like (component_name, state_name).
-            :type tail: list
-            :param ignore_prob: Helper flag that allows S-node to have prob values less than 0 or greater than 1.
-                Use with caution.
-            :type ignore_prob: bool
+    def add_snode(self, target_component_name: str, target_state_name, prob: float, tail: list = None, ignore_prob: bool = False) -> int:
         """
-        # Check S-node validity
-        head_idx, prob, tail_indices = self._check_snode(
-                target_componet_name,
-                target_state_name,
-                prob,
-                tail,
-                ignore_prob,
-                )
-        # Pad adjanency from the bottom
-        if self.head_adj is None and self.tail_adj is None:
-            self.head_adj = self.sparse_array_obj(np.zeros((len(self.inodes), 1), dtype=int))
-            self.tail_adj = self.sparse_array_obj(np.zeros((1, len(self.inodes)), dtype=int))
-        else:
-            self.head_adj._shape = (self.head_adj.shape[0], self.head_adj.shape[1] + 1)
-            self.tail_adj._shape = (self.tail_adj.shape[0] + 1, self.tail_adj.shape[1])
-        # Now add the incoming tails to the S-node
-        if tail_indices:
-            for tail_idx in tail_indices:
-                self.tail_adj[-1,tail_idx] = 1
-        # Now add the outgoing head of the S-node
-        self.head_adj[head_idx,-1] = 1
-        # If None overwride
-        if self.snode_probs is None:
-            self.snode_probs = [prob]
-            self._snodes = [(head_idx, prob, tail_indices)]
-        else:
-            self.snode_probs.append(prob)
-            self._snodes.append((head_idx, prob, tail_indices))
-        # Return the S-node index
+        Adds a Support Node (S-node) to the BKB.
+
+        :param target_component_name: Component name of the S-node's head I-node.
+        :param target_state_name: State name of the S-node's head I-node.
+        :param prob: Probability associated with the S-node.
+        :param tail: Optional list of tuples representing the tail I-nodes.
+        :param ignore_prob: If True, allows probabilities outside [0,1].
+        """
+        head_idx, prob, tail_indices = self._check_snode(target_component_name, target_state_name, prob, tail or [], ignore_prob)
+
+        self._ensure_adjacency_matrices_initialized()
+        num_snodes = len(self.snode_probs)
+        self.head_adj.resize((len(self.inodes), num_snodes + 1))
+        self.tail_adj.resize((num_snodes + 1, len(self.inodes)))
+
+        for tail_idx in tail_indices:
+            self.tail_adj[num_snodes, tail_idx] = 1
+        self.head_adj[head_idx, num_snodes] = 1
+
+        self.snode_probs.append(prob)
+        self._snodes.append((head_idx, prob, tail_indices))
+        # Return the S-node id
         return len(self.snode_probs) - 1
 
-    def find_snodes(self, target_componet_name:str, target_state_name, prob:float=None, tail_subset:list=None):
-        head_idx = self._get_inode_index(target_componet_name, target_state_name)
-        # Find all S-nodes with this head 
-        # Will return a tuple of the form (array(zeros), array(snode column indices))
-        snode_indices = self.head_adj[[head_idx],:].nonzero()[1]
-        # Match snodes with matched criteria
-        if prob is None and tail_subset is None:
-            return snode_indices
-        elif prob and tail_subset is None:
-            return [snode_idx for snode_idx in snode_indices if self.snode_probs[snode_idx] == prob]
-        elif prob is None and tail_subset:
-            _snode_indices = []
-            for snode_idx in snode_indices:
-                tail = self.get_snode_tail(snode_idx)
-                if len(set.intersection(*[set(tail_subset), set(tail)])) == len(tail_subset):
-                    _snode_indices.append(snode_idx)
-            return _snode_indices
-        _snode_indices = []
+    def find_snodes(self, target_component_name: str, target_state_name, prob: float = None, tail_subset: list = None):
+        """
+        Finds S-nodes matching specified head component/state, probability, and tail subset criteria.
+
+        :param target_component_name: Name of the head I-node's component.
+        :param target_state_name: State of the head I-node.
+        :param prob: Optional. Probability associated with the S-node to filter by.
+        :param tail_subset: Optional. A list of tail I-node (component, state) tuples to filter by.
+        :return: Indices of S-nodes in the BKB that match all specified criteria.
+        """
+        head_idx = self._get_inode_index(target_component_name, target_state_name)
+        # Find all S-nodes with the specified head.
+        snode_indices = self.head_adj[[head_idx], :].nonzero()[1]
+
+        # Apply filters for probability and tail subset if specified.
+        filtered_indices = []
         for snode_idx in snode_indices:
-            if self.snode_probs[snode_idx] != prob:
-                continue
+            if prob is not None and self.snode_probs[snode_idx] != prob:
+                continue  # Skip S-nodes not matching the probability if specified.
+
             tail = self.get_snode_tail(snode_idx)
-            if len(set.intersection(*[set(tail_subset), set(tail)])) == len(tail_subset):
-                _snode_indices.append(snode_idx)
-        return _snode_indices
+            tail_set = set(tail)
+            
+            if tail_subset:
+                tail_subset_set = set(tail_subset)
+                # Check if the specified tail subset matches the S-node's tail.
+                if not tail_subset_set.issubset(tail_set):
+                    continue  # Skip S-nodes not matching the tail subset if specified.
+            
+            # If all filters pass, add the S-node index to the result.
+            filtered_indices.append(snode_idx)
+            
+        return filtered_indices
 
     @property
     def snodes_by_head(self):
+        """
+        Groups S-nodes by their head I-node.
+
+        This property creates a dictionary where each key is a tuple representing a head I-node,
+        and the value is a list of indices of S-nodes that have this I-node as their head.
+
+        :return: A dictionary mapping head I-nodes to lists of S-node indices.
+        :rtype: dict[tuple, list[int]]
+        """
         snodes_by_head = defaultdict(list)
         for snode_idx in range(len(self.snode_probs)):
-            snodes_by_head[self.get_snode_head(snode_idx)].append(snode_idx)
-        return snodes_by_head 
+            head = self.get_snode_head(snode_idx)
+            snodes_by_head[head].append(snode_idx)
+        return dict(snodes_by_head)
    
     @property
     def snodes_by_tail(self):
+        """
+        Groups S-nodes by their tail I-nodes.
+
+        This property creates a dictionary where each key is a frozenset representing the tail I-nodes,
+        and the value is a list of indices of S-nodes that have these I-nodes in their tail.
+
+        :return: A dictionary mapping sets of tail I-nodes to lists of S-node indices. The use of frozenset ensures that the order of tail I-nodes does not affect the grouping.
+        :rtype: dict[frozenset, list[int]]
+        """
         snodes_by_tail = defaultdict(list)
         for snode_idx in range(len(self.snode_probs)):
-            snodes_by_tail[frozenset(self.get_snode_tail(snode_idx))].append(snode_idx)
-        return snodes_by_tail
+            tail = frozenset(self.get_snode_tail(snode_idx))
+            snodes_by_tail[tail].append(snode_idx)
+        return dict(snodes_by_tail)
 
     def are_snodes_mutex(self, snode_index1, snode_index2, check_head=True):
-        # Check head
+        """
+        Determines if two S-nodes are mutually exclusive based on their heads and tails.
+
+        :param snode_index1: Index of the first S-node.
+        :param snode_index2: Index of the second S-node.
+        :param check_head: Whether to check if the S-nodes have different heads as part of the mutex check.
+        :return: True if the S-nodes are mutually exclusive, False otherwise.
+        """
         if check_head and self.get_snode_head(snode_index1) != self.get_snode_head(snode_index2):
-            return True
-        # Check tail
-        tail1 = set(self.get_snode_tail(snode_index1))
-        tail2 = set(self.get_snode_tail(snode_index2))
-        # First case: If both tails are empty
-        if len(tail1) == len(tail2) == 0:
-            return False
-        # Second case: If one tail is empty and the other is not
-        if len(tail1) == 0 or len(tail2) == 0:
-            return False
-        # Third case: At least one instantiation differs
-        tail_diff = set.symmetric_difference(*[tail1, tail2])
-        if len(tail_diff) == 0:
-            return False
-        # Organize tail difference by features
-        tail_diff_dict = defaultdict(list)
-        for tail_feature, tail_state in tail_diff:
-            tail_diff_dict[tail_feature].append(tail_state)
-        # Go through the difference dict and see if any features have more than one state assigned
-        for feature, states in tail_diff_dict.items():
-            if len(states) == 2:
-                return True
-        return False
+            return True  # S-nodes with different heads are considered mutually exclusive.
+
+        tail1, tail2 = map(set, (self.get_snode_tail(snode_index1), self.get_snode_tail(snode_index2)))
+
+        # Mutual exclusion is violated if both tails are identical.
+        return tail1 != tail2
 
     def is_mutex(self, verbose=False) -> bool:
-        # Find S-nodes that have the same head instantiation
-        for adj_idx in tqdm.tqdm(range(len(self.inodes)), desc='Checking Head I-nodes', disable=not verbose):
-            test_mutex_snodes = self.head_adj[[adj_idx], :].nonzero()[1] 
-            # Test every pair of S-nodes to ensure all are mutex with each other (may be a faster way to do this)
-            n = len(test_mutex_snodes)
-            try:
-                total_pairs_to_check = math.factorial(n) / (math.factorial(n-2)*math.factorial(2))
-            except ValueError:
-                total_pairs_to_check = 0
-            if verbose:
-                tqdm.tqdm.write(f'Checking {total_pairs_to_check} pairs of S-nodes')
-            for snode_idx1, snode_idx2 in itertools.combinations(test_mutex_snodes, r=2):
-                # Don't check
-                if snode_idx1 == snode_idx2:
-                    continue
-                # Check
-                if not self.are_snodes_mutex(snode_idx1, snode_idx2, check_head=False):
-                    raise BKBNotMutexError(snode_idx1, snode_idx2)
-        return True
-
-    @classmethod
-    def union(cls, *args, sparse_array_format='dok'):
-        """ Performs a simple union between two or more BKBs. Warnings: This does not 
-        guarentee the unioned BKB will be Mutex.
         """
-        # Create name
-        name = 'Union of: '
-        for bkb in args:
-            name += f'{bkb.name}, '
-        name = name[:-2]
-        # Initialize Unioned BKB
-        unioned = cls(
-                name=name, 
-                sparse_array_format=sparse_array_format,
-                )
-        # Collect all I-nodes
-        all_inodes = set()
-        for bkb in args:
-            all_inodes.update(set(bkb.inodes))
-        # Now add
-        for feature, state in all_inodes:
-            unioned.add_inode(feature, state)
-        # Add all S-nodes from bkbs
-        for bkb in args:
+        Checks the entire BKB to ensure that all S-nodes are mutually exclusive where required.
+
+        :param verbose: If True, outputs progress and diagnostic information.
+        :return: True if the mutual exclusion condition holds across the BKB, False if violated.
+        :raises BKBNotMutexError: If any pair of S-nodes violates the mutual exclusion condition.
+        """
+        for adj_idx in tqdm.tqdm(range(len(self.inodes)), desc='Checking Head I-nodes', disable=not verbose):
+            snode_indices = self.head_adj[[adj_idx], :].nonzero()[1]
+
+            for snode_idx1, snode_idx2 in itertools.combinations(snode_indices, 2):
+                if not self.are_snodes_mutex(snode_idx1, snode_idx2, check_head=False):
+                    if verbose:
+                        tqdm.write(f'Mutex violation between S-node {snode_idx1} and S-node {snode_idx2}')
+                    raise BKBNotMutexError(snode_idx1, snode_idx2)
+
+        return True
+    @classmethod
+    def union(cls, *bkbs, sparse_array_format='dok'):
+        """
+        Creates a union of multiple BKBs into a single BKB. This method combines the I-nodes and S-nodes from the given BKBs.
+
+        Note: This method does not guarantee that the resulting union BKB will be mutually exclusive (Mutex).
+
+        :param bkbs: An arbitrary number of BKB objects to be unified.
+        :param sparse_array_format: The format of sparse arrays in the resulting union BKB. Defaults to 'dok'.
+        :return: A new BKB instance representing the union of the input BKBs.
+        """
+        # Construct a unique name for the unioned BKB based on the names of the input BKBs.
+        name = 'Union of: ' + ', '.join(bkb.name for bkb in bkbs)
+
+        # Initialize the unioned BKB with the constructed name and specified sparse array format.
+        unioned = cls(name=name, sparse_array_format=sparse_array_format)
+
+        # Iterate over each BKB to collect and add unique I-nodes and S-nodes to the unioned BKB.
+        for bkb in bkbs:
+            # Add unique I-nodes.
+            for inode in bkb.inodes:
+                if not unioned.inodes or inode not in unioned.inodes:
+                    unioned.add_inode(*inode)
+
+            # Add S-nodes.
             for snode_idx, snode_prob in enumerate(bkb.snode_probs):
                 snode_head = bkb.get_snode_head(snode_idx)
                 snode_tail = bkb.get_snode_tail(snode_idx)
-                unioned.add_snode(
-                        snode_head[0],
-                        snode_head[1],
-                        prob=snode_prob,
-                        tail=snode_tail,
-                        )
+                # Avoid adding duplicate S-nodes by checking if the unioned BKB already contains the S-node.
+                if not unioned.find_snodes(snode_head[0], snode_head[1], prob=snode_prob, tail_subset=snode_tail):
+                    unioned.add_snode(snode_head[0], snode_head[1], prob=snode_prob, tail=snode_tail)
+
         return unioned
-    
+
     def get_causal_ruleset(self) -> dict:
-        """ Returns a dictionary keyed by feature name with list values corresponding to
-            the S-node index in each causal ruleset.
         """
-        crs = defaultdict(list)
-        for adj_idx in range(len(self.inodes)):
-            feature, state = self.inodes[adj_idx]
-            # Will return a tuple of the form (array(zeros), array(snode column indices))
-            snode_indices = self.head_adj[[adj_idx],:].nonzero()[1]
-            # Subtract number of S-nodes to get true indices
-            crs[feature].extend(list(snode_indices))
-        return crs
+        Maps each feature to a list of indices of S-nodes forming causal rulesets.
+
+        A causal ruleset for a feature consists of all S-nodes where the feature acts as the head
+        in the causal relationship represented by the S-node.
+
+        :return: A dictionary where keys are feature names and values are lists of S-node indices.
+        """
+        causal_rulesets = defaultdict(list)
+        for snode_index in range(len(self.snode_probs)):
+            head_inode = self.get_snode_head(snode_index)
+            feature = head_inode[0]
+            causal_rulesets[feature].append(snode_index)
+
+        return dict(causal_rulesets)
 
     def __eq__(self, other) -> bool:
-        # First check to see if the inodes are the same
-        C = set.intersection(*[set(self.inodes), set(other.inodes)])
-        if len(C) != len(self.inodes):
+        """
+        Determines if two BKB instances are equal based on their I-nodes and S-nodes.
+
+        :param other: Another BKB instance to compare with.
+        :return: True if both instances have the same I-nodes and S-nodes, False otherwise.
+        """
+        if not isinstance(other, BKB):
+            return NotImplemented
+
+        # Direct comparison of I-nodes for equality.
+        if set(self.inodes) != set(other.inodes):
+            print('Inodes not equal')
             return False
-        # Check to see that all S-node probabilities are the same
-        if len(np.intersect1d(np.array(self.snode_probs), np.array(other.snode_probs))) != len(set(self.snode_probs)):
+
+        # Ensuring both BKBs have the same S-node probabilities and structures.
+        if len(self.snode_probs) != len(other.snode_probs):
+            print('Snode len not equal')
             return False
-        # If both easy tests pass, check each S-node structure
-        for snode_idx1, prob1 in enumerate(self.snode_probs):
-            found = False
-            for snode_idx2, prob2 in enumerate(other.snode_probs):
-                # Check probability
-                if prob1 != prob2:
-                    continue
-                # Check structure
-                # Check if head is the same
-                if self.get_snode_head(snode_idx1) != other.get_snode_head(snode_idx2):
-                    continue
-                # Check if tail is the same
-                if set(self.get_snode_tail(snode_idx1)) != set(other.get_snode_tail(snode_idx2)):
-                    continue
-                # Passed all tests, so we found the same S-node, break
-                found = True
-                break
-            # Check if the S-node was found, if not return false
-            if not found:
+
+        for snode_idx, _ in enumerate(self.snode_probs):
+            snode_other_indices = other.find_snodes(
+                *self.get_snode_head(snode_idx),
+                prob=self.snode_probs[snode_idx], 
+                tail_subset=self.get_snode_tail(snode_idx)
+                )
+            # Should only be one S-node with the same head and tail and prob
+            if len(snode_other_indices) > 1:
+                print('Multiple S-nodes found with same head, tail, and prob')
                 return False
+            if not snode_other_indices:
+                print('Snode not found with same head, tail, and prob')
+                return False
+            other_snode_idx = snode_other_indices[0]
+            if self.snode_probs[snode_idx] != other.snode_probs[other_snode_idx]:
+                print('Snode probs not equal for index:', snode_idx)
+                return False
+
         return True
     
     def __hash__(self):
-        return make_hash_sha256(self.to_dict())
+        """
+        Generates a hash value for a BKB instance.
+
+        The hash is based on the deterministic serialization of the BKB to a dictionary, ensuring that
+        equal BKBs produce the same hash value.
+
+        :return: The hash value of the BKB instance.
+        """
+        # Ensuring the dictionary representation is sorted to produce a consistent hash value.
+        serialized_dict = self.to_dict(make_json_serializable=True)
+        sorted_serialized_str = str(sorted(serialized_dict.items()))
+        return hash(sorted_serialized_str)
+

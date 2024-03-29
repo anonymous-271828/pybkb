@@ -1,0 +1,136 @@
+{
+ "Name": "b4ae0754-8c0c-4a76-8eb4-2aa3e3cd8e7e",
+ "Instantiation Nodes": {
+  "ReproduceAbility": [
+   "Low",
+   "High"
+  ],
+  "pH_Value": [
+   "lt6.5",
+   "Normal",
+   "gt7.5"
+  ],
+  "OverCrowd": [
+   "No",
+   "Yes"
+  ],
+  "AcidLevel": [
+   "Low",
+   "High"
+  ]
+ },
+ "Support Nodes": [
+  {
+   "Head": {
+    "pH_Value": "lt6.5"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "OverCrowd": "Yes",
+    "AcidLevel": "Low"
+   }
+  },
+  {
+   "Head": {
+    "OverCrowd": "Yes"
+   },
+   "Probability": 0.25,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "pH_Value": "Normal"
+   },
+   "Probability": 0.15,
+   "Tail": {
+    "AcidLevel": "High"
+   }
+  },
+  {
+   "Head": {
+    "OverCrowd": "No"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "ReproduceAbility": "High"
+   }
+  },
+  {
+   "Head": {
+    "ReproduceAbility": "Low"
+   },
+   "Probability": 0.78,
+   "Tail": {
+    "pH_Value": "lt6.5"
+   }
+  },
+  {
+   "Head": {
+    "ReproduceAbility": "Low"
+   },
+   "Probability": 0.1,
+   "Tail": {
+    "pH_Value": "Normal"
+   }
+  },
+  {
+   "Head": {
+    "pH_Value": "lt6.5"
+   },
+   "Probability": 0.8,
+   "Tail": {
+    "AcidLevel": "High"
+   }
+  },
+  {
+   "Head": {
+    "ReproduceAbility": "High"
+   },
+   "Probability": 0.22,
+   "Tail": {
+    "pH_Value": "lt6.5"
+   }
+  },
+  {
+   "Head": {
+    "ReproduceAbility": "High"
+   },
+   "Probability": 0.9,
+   "Tail": {
+    "pH_Value": "Normal"
+   }
+  },
+  {
+   "Head": {
+    "OverCrowd": "No"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "ReproduceAbility": "Low"
+   }
+  },
+  {
+   "Head": {
+    "pH_Value": "gt7.5"
+   },
+   "Probability": 0.05,
+   "Tail": {
+    "AcidLevel": "High"
+   }
+  },
+  {
+   "Head": {
+    "AcidLevel": "Low"
+   },
+   "Probability": 0.9,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "AcidLevel": "High"
+   },
+   "Probability": 0.1,
+   "Tail": {}
+  }
+ ]
+}

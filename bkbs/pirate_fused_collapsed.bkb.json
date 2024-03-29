@@ -1,0 +1,2044 @@
+{
+    "Name": "fused",
+    "Description": null,
+    "Instantiation Nodes": {
+        "(B) Has piracy equipment": [
+            "No",
+            "Yes"
+        ],
+        "(B) Fish supply is sufficient": [
+            "Yes",
+            "No"
+        ],
+        "(B) Has (access to) a (fishing) boat": [
+            "Yes",
+            "No"
+        ],
+        "(B) Has a skiff": [
+            "Yes",
+            "No"
+        ],
+        "(B) Piracy benefit is ok": [
+            "Yes",
+            "No"
+        ],
+        "(B) Fishing livelihood is threatened": [
+            "No",
+            "Yes"
+        ],
+        "(B) Tsunami is destructive": [
+            "Yes",
+            "No"
+        ],
+        "(B) Has fishing equipment": [
+            "No",
+            "Yes"
+        ],
+        "(B) Illegal fishing has occurred": [
+            "Yes",
+            "No"
+        ],
+        "(B) Fishing benefit is ok": [
+            "Yes",
+            "No"
+        ],
+        "(X) Boarding skills": [
+            "No",
+            "Yes"
+        ],
+        "(B) Survival is moral": [
+            "Yes",
+            "No"
+        ],
+        "(B) Weapons are obtainable": [
+            "Yes",
+            "No"
+        ],
+        "(X) Seafaring skills": [
+            "Yes",
+            "No"
+        ],
+        "(B) Piracy cost is ok": [
+            "Yes",
+            "No"
+        ],
+        "(B) Has fishing skills": [
+            "Yes",
+            "No"
+        ],
+        "(B) Fishing cost is ok": [
+            "Yes",
+            "No"
+        ],
+        "(B) Boarding skills are obtainable": [
+            "Yes",
+            "No"
+        ],
+        "(B) Tsunami just occurred": [
+            "Yes",
+            "No"
+        ],
+        "(G) Livelihood is fishing": [
+            "Yes",
+            "No"
+        ],
+        "(B) Revenge is moral": [
+            "Yes",
+            "No"
+        ],
+        "(G) Livelihood is piracy": [
+            "Yes",
+            "No"
+        ],
+        "(B) Has piracy skills": [
+            "Yes",
+            "No"
+        ],
+        "(B) Has fishing net": [
+            "Yes",
+            "No"
+        ],
+        "(B) Attitude towards piracy": [
+            "Positive",
+            "Negative"
+        ],
+        "__Source__[(B) Has fishing net]": [
+            "frozenset({'0'})"
+        ],
+        "__Source__[(B) Has fishing equipment]": [
+            "frozenset({'0'})",
+            "frozenset({'4'})"
+        ],
+        "__Source__[(B) Fishing cost is ok]": [
+            "frozenset({'0'})"
+        ],
+        "__Source__[(G) Livelihood is fishing]": [
+            "frozenset({'0'})"
+        ],
+        "__Source__[(B) Fishing benefit is ok]": [
+            "frozenset({'0'})"
+        ],
+        "__Source__[(X) Seafaring skills]": [
+            "frozenset({'0'})",
+            "frozenset({'3'})"
+        ],
+        "__Source__[(B) Has (access to) a (fishing) boat]": [
+            "frozenset({'0'})",
+            "frozenset({'4'})"
+        ],
+        "__Source__[(B) Fish supply is sufficient]": [
+            "frozenset({'0'})",
+            "frozenset({'1'})",
+            "frozenset({'1', '2'})",
+            "frozenset({'2'})"
+        ],
+        "__Source__[(B) Has fishing skills]": [
+            "frozenset({'0'})"
+        ],
+        "__Source__[(B) Boarding skills are obtainable]": [
+            "frozenset({'1', '2'})",
+            "frozenset({'1'})",
+            "frozenset({'2'})"
+        ],
+        "__Source__[(B) Fishing livelihood is threatened]": [
+            "frozenset({'1', '2'})",
+            "frozenset({'4'})"
+        ],
+        "__Source__[(B) Survival is moral]": [
+            "frozenset({'1', '2'})"
+        ],
+        "__Source__[(B) Revenge is moral]": [
+            "frozenset({'1', '2'})"
+        ],
+        "__Source__[(B) Attitude towards piracy]": [
+            "frozenset({'1', '2'})",
+            "frozenset({'3'})"
+        ],
+        "__Source__[(X) Boarding skills]": [
+            "frozenset({'1', '2'})",
+            "frozenset({'3'})"
+        ],
+        "__Source__[(B) Illegal fishing has occurred]": [
+            "frozenset({'1'})",
+            "frozenset({'2'})"
+        ],
+        "__Source__[(B) Has piracy skills]": [
+            "frozenset({'3'})"
+        ],
+        "__Source__[(G) Livelihood is piracy]": [
+            "frozenset({'3'})"
+        ],
+        "__Source__[(B) Piracy cost is ok]": [
+            "frozenset({'3'})"
+        ],
+        "__Source__[(B) Has piracy equipment]": [
+            "frozenset({'3'})"
+        ],
+        "__Source__[(B) Piracy benefit is ok]": [
+            "frozenset({'3'})"
+        ],
+        "__Source__[(B) Weapons are obtainable]": [
+            "frozenset({'3'})"
+        ],
+        "__Source__[(B) Has a skiff]": [
+            "frozenset({'3'})"
+        ],
+        "__Source__[(B) Tsunami is destructive]": [
+            "frozenset({'4'})"
+        ],
+        "__Source__[(B) Tsunami just occurred]": [
+            "frozenset({'4'})"
+        ]
+    },
+    "Support Nodes": [
+        {
+            "Probability": 0.99,
+            "Head": {
+                "(B) Has fishing net": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Has fishing net]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Has fishing net]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.001,
+            "Head": {
+                "(B) Has fishing equipment": "No"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "Yes",
+                "(B) Has fishing net": "Yes",
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(B) Has fishing equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "No",
+                "(B) Has fishing net": "Yes",
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(B) Fishing cost is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Has fishing skills": "No",
+                "(B) Has fishing equipment": "Yes",
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.2,
+            "Head": {
+                "(G) Livelihood is fishing": "No"
+            },
+            "Tail": {
+                "(B) Fishing benefit is ok": "No",
+                "(B) Fishing cost is ok": "Yes",
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.8,
+            "Head": {
+                "(G) Livelihood is fishing": "Yes"
+            },
+            "Tail": {
+                "(B) Fishing benefit is ok": "No",
+                "(B) Fishing cost is ok": "Yes",
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.999,
+            "Head": {
+                "(B) Fishing cost is ok": "No"
+            },
+            "Tail": {
+                "(B) Has fishing skills": "No",
+                "(B) Has fishing equipment": "No",
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(B) Has fishing equipment": "No"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "Yes",
+                "(B) Has fishing net": "No",
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.0,
+            "Head": {
+                "(B) Fishing benefit is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Fish supply is sufficient": "No",
+                "__Source__[(B) Fishing benefit is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Fishing benefit is ok]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.999,
+            "Head": {
+                "(B) Has fishing equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "Yes",
+                "(B) Has fishing net": "Yes",
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "(G) Livelihood is fishing": "Yes"
+            },
+            "Tail": {
+                "(B) Fishing benefit is ok": "Yes",
+                "(B) Fishing cost is ok": "No",
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "(B) Fishing benefit is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Fish supply is sufficient": "Yes",
+                "__Source__[(B) Fishing benefit is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.01,
+            "Head": {
+                "(B) Has fishing net": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Has fishing net]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.001,
+            "Head": {
+                "(X) Seafaring skills": "No"
+            },
+            "Tail": {
+                "__Source__[(X) Seafaring skills]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(X) Seafaring skills]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.001,
+            "Head": {
+                "(G) Livelihood is fishing": "No"
+            },
+            "Tail": {
+                "(B) Fishing benefit is ok": "Yes",
+                "(B) Fishing cost is ok": "Yes",
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.99,
+            "Head": {
+                "(B) Has (access to) a (fishing) boat": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Has (access to) a (fishing) boat]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(B) Has (access to) a (fishing) boat]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.001,
+            "Head": {
+                "(B) Fishing cost is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Has fishing skills": "No",
+                "(B) Has fishing equipment": "No",
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.001,
+            "Head": {
+                "(B) Fishing cost is ok": "No"
+            },
+            "Tail": {
+                "(B) Has fishing skills": "Yes",
+                "(B) Has fishing equipment": "Yes",
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.97,
+            "Head": {
+                "(B) Fish supply is sufficient": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Fish supply is sufficient]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.2,
+            "Head": {
+                "__Source__[(B) Fish supply is sufficient]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(B) Fishing cost is ok": "No"
+            },
+            "Tail": {
+                "(B) Has fishing skills": "No",
+                "(B) Has fishing equipment": "Yes",
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(G) Livelihood is fishing": "No"
+            },
+            "Tail": {
+                "(B) Fishing benefit is ok": "No",
+                "(B) Fishing cost is ok": "No",
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.03,
+            "Head": {
+                "(B) Fish supply is sufficient": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Fish supply is sufficient]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.999,
+            "Head": {
+                "(G) Livelihood is fishing": "Yes"
+            },
+            "Tail": {
+                "(B) Fishing benefit is ok": "Yes",
+                "(B) Fishing cost is ok": "Yes",
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.999,
+            "Head": {
+                "(X) Seafaring skills": "Yes"
+            },
+            "Tail": {
+                "__Source__[(X) Seafaring skills]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.999,
+            "Head": {
+                "(B) Has fishing equipment": "No"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "No",
+                "(B) Has fishing net": "No",
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.999,
+            "Head": {
+                "(B) Fishing cost is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Has fishing skills": "Yes",
+                "(B) Has fishing equipment": "Yes",
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.6,
+            "Head": {
+                "(B) Fishing cost is ok": "No"
+            },
+            "Tail": {
+                "(B) Has fishing skills": "Yes",
+                "(B) Has fishing equipment": "No",
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(B) Has fishing equipment": "No"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "No",
+                "(B) Has fishing net": "Yes",
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "(B) Fishing benefit is ok": "No"
+            },
+            "Tail": {
+                "(B) Fish supply is sufficient": "No",
+                "__Source__[(B) Fishing benefit is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.001,
+            "Head": {
+                "(B) Has fishing equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "No",
+                "(B) Has fishing net": "No",
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.0,
+            "Head": {
+                "(B) Fishing benefit is ok": "No"
+            },
+            "Tail": {
+                "(B) Fish supply is sufficient": "Yes",
+                "__Source__[(B) Fishing benefit is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "(B) Has fishing skills": "Yes"
+            },
+            "Tail": {
+                "(X) Seafaring skills": "Yes",
+                "__Source__[(B) Has fishing skills]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Has fishing skills]": "{'0'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.01,
+            "Head": {
+                "(B) Has (access to) a (fishing) boat": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Has (access to) a (fishing) boat]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.6,
+            "Head": {
+                "(G) Livelihood is fishing": "No"
+            },
+            "Tail": {
+                "(B) Fishing benefit is ok": "Yes",
+                "(B) Fishing cost is ok": "No",
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "(B) Fishing cost is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Has fishing skills": "Yes",
+                "(B) Has fishing equipment": "No",
+                "__Source__[(B) Fishing cost is ok]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(B) Has fishing equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "Yes",
+                "(B) Has fishing net": "No",
+                "__Source__[(B) Has fishing equipment]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "(B) Has fishing skills": "No"
+            },
+            "Tail": {
+                "(X) Seafaring skills": "No",
+                "__Source__[(B) Has fishing skills]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(G) Livelihood is fishing": "Yes"
+            },
+            "Tail": {
+                "(B) Fishing benefit is ok": "No",
+                "(B) Fishing cost is ok": "No",
+                "__Source__[(G) Livelihood is fishing]": "{'0'}"
+            }
+        },
+        {
+            "Probability": 0.35,
+            "Head": {
+                "(B) Boarding skills are obtainable": "No"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "Yes",
+                "__Source__[(B) Boarding skills are obtainable]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(B) Boarding skills are obtainable]": "{'1', '2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "Yes"
+            },
+            "Tail": {
+                "(B) Fish supply is sufficient": "Yes",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.6666666666666666,
+            "Head": {
+                "__Source__[(B) Fishing livelihood is threatened]": "{'1', '2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(B) Survival is moral": "Yes"
+            },
+            "Tail": {
+                "(B) Fishing livelihood is threatened": "No",
+                "__Source__[(B) Survival is moral]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Survival is moral]": "{'1', '2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(B) Revenge is moral": "Yes"
+            },
+            "Tail": {
+                "(B) Fishing livelihood is threatened": "No",
+                "__Source__[(B) Revenge is moral]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Revenge is moral]": "{'1', '2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(B) Survival is moral": "Yes"
+            },
+            "Tail": {
+                "(B) Fishing livelihood is threatened": "Yes",
+                "__Source__[(B) Survival is moral]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(B) Boarding skills are obtainable": "No"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "No",
+                "__Source__[(B) Boarding skills are obtainable]": "{'1'}"
+            }
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "__Source__[(B) Boarding skills are obtainable]": "{'1'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(B) Revenge is moral": "Yes"
+            },
+            "Tail": {
+                "(B) Fishing livelihood is threatened": "Yes",
+                "__Source__[(B) Revenge is moral]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(B) Attitude towards piracy": "Positive"
+            },
+            "Tail": {
+                "(B) Survival is moral": "No",
+                "(B) Revenge is moral": "No",
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.6666666666666666,
+            "Head": {
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(X) Boarding skills": "No"
+            },
+            "Tail": {
+                "(B) Boarding skills are obtainable": "Yes",
+                "__Source__[(X) Boarding skills]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.6666666666666666,
+            "Head": {
+                "__Source__[(X) Boarding skills]": "{'1', '2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(X) Boarding skills": "Yes"
+            },
+            "Tail": {
+                "(B) Boarding skills are obtainable": "Yes",
+                "__Source__[(X) Boarding skills]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.8,
+            "Head": {
+                "(B) Attitude towards piracy": "Positive"
+            },
+            "Tail": {
+                "(B) Survival is moral": "Yes",
+                "(B) Revenge is moral": "Yes",
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.6,
+            "Head": {
+                "(B) Attitude towards piracy": "Positive"
+            },
+            "Tail": {
+                "(B) Survival is moral": "No",
+                "(B) Revenge is moral": "Yes",
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.05,
+            "Head": {
+                "(X) Boarding skills": "Yes"
+            },
+            "Tail": {
+                "(B) Boarding skills are obtainable": "No",
+                "__Source__[(X) Boarding skills]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(B) Attitude towards piracy": "Negative"
+            },
+            "Tail": {
+                "(B) Survival is moral": "Yes",
+                "(B) Revenge is moral": "No",
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.2,
+            "Head": {
+                "(B) Attitude towards piracy": "Negative"
+            },
+            "Tail": {
+                "(B) Survival is moral": "Yes",
+                "(B) Revenge is moral": "Yes",
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(B) Illegal fishing has occurred": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Illegal fishing has occurred]": "{'1'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(B) Illegal fishing has occurred]": "{'1'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.65,
+            "Head": {
+                "(B) Fish supply is sufficient": "No"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "Yes",
+                "__Source__[(B) Fish supply is sufficient]": "{'1'}"
+            }
+        },
+        {
+            "Probability": 0.2,
+            "Head": {
+                "__Source__[(B) Fish supply is sufficient]": "{'1'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(B) Fish supply is sufficient": "Yes"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "No",
+                "__Source__[(B) Fish supply is sufficient]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "__Source__[(B) Fish supply is sufficient]": "{'1', '2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "(B) Attitude towards piracy": "Negative"
+            },
+            "Tail": {
+                "(B) Survival is moral": "No",
+                "(B) Revenge is moral": "Yes",
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(B) Illegal fishing has occurred": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Illegal fishing has occurred]": "{'1'}"
+            }
+        },
+        {
+            "Probability": 0.95,
+            "Head": {
+                "(X) Boarding skills": "No"
+            },
+            "Tail": {
+                "(B) Boarding skills are obtainable": "No",
+                "__Source__[(X) Boarding skills]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(B) Fish supply is sufficient": "No"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "No",
+                "__Source__[(B) Fish supply is sufficient]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.8,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "Yes"
+            },
+            "Tail": {
+                "(B) Fish supply is sufficient": "No",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(B) Survival is moral": "No"
+            },
+            "Tail": {
+                "(B) Fishing livelihood is threatened": "Yes",
+                "__Source__[(B) Survival is moral]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(B) Revenge is moral": "No"
+            },
+            "Tail": {
+                "(B) Fishing livelihood is threatened": "No",
+                "__Source__[(B) Revenge is moral]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(B) Boarding skills are obtainable": "Yes"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "No",
+                "__Source__[(B) Boarding skills are obtainable]": "{'1'}"
+            }
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(B) Attitude towards piracy": "Positive"
+            },
+            "Tail": {
+                "(B) Survival is moral": "Yes",
+                "(B) Revenge is moral": "No",
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.2,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "No"
+            },
+            "Tail": {
+                "(B) Fish supply is sufficient": "No",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(B) Revenge is moral": "No"
+            },
+            "Tail": {
+                "(B) Fishing livelihood is threatened": "Yes",
+                "__Source__[(B) Revenge is moral]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(B) Survival is moral": "No"
+            },
+            "Tail": {
+                "(B) Fishing livelihood is threatened": "No",
+                "__Source__[(B) Survival is moral]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.35,
+            "Head": {
+                "(B) Fish supply is sufficient": "Yes"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "Yes",
+                "__Source__[(B) Fish supply is sufficient]": "{'1'}"
+            }
+        },
+        {
+            "Probability": 0.65,
+            "Head": {
+                "(B) Boarding skills are obtainable": "Yes"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "Yes",
+                "__Source__[(B) Boarding skills are obtainable]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.6,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "No"
+            },
+            "Tail": {
+                "(B) Fish supply is sufficient": "Yes",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(B) Attitude towards piracy": "Negative"
+            },
+            "Tail": {
+                "(B) Survival is moral": "No",
+                "(B) Revenge is moral": "No",
+                "__Source__[(B) Attitude towards piracy]": "{'1', '2'}"
+            }
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(B) Boarding skills are obtainable": "Yes"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "No",
+                "__Source__[(B) Boarding skills are obtainable]": "{'2'}"
+            }
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "__Source__[(B) Boarding skills are obtainable]": "{'2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.0,
+            "Head": {
+                "(B) Illegal fishing has occurred": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Illegal fishing has occurred]": "{'2'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(B) Illegal fishing has occurred]": "{'2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.25,
+            "Head": {
+                "(B) Fish supply is sufficient": "Yes"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "Yes",
+                "__Source__[(B) Fish supply is sufficient]": "{'2'}"
+            }
+        },
+        {
+            "Probability": 0.2,
+            "Head": {
+                "__Source__[(B) Fish supply is sufficient]": "{'2'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(B) Boarding skills are obtainable": "No"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "No",
+                "__Source__[(B) Boarding skills are obtainable]": "{'2'}"
+            }
+        },
+        {
+            "Probability": 0.75,
+            "Head": {
+                "(B) Fish supply is sufficient": "No"
+            },
+            "Tail": {
+                "(B) Illegal fishing has occurred": "Yes",
+                "__Source__[(B) Fish supply is sufficient]": "{'2'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "(B) Illegal fishing has occurred": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Illegal fishing has occurred]": "{'2'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "(B) Has piracy skills": "No"
+            },
+            "Tail": {
+                "(X) Boarding skills": "Yes",
+                "(X) Seafaring skills": "No",
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(G) Livelihood is piracy": "Yes"
+            },
+            "Tail": {
+                "(B) Piracy cost is ok": "No",
+                "(B) Attitude towards piracy": "Positive",
+                "(B) Piracy benefit is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "(B) Has piracy skills": "Yes"
+            },
+            "Tail": {
+                "(X) Boarding skills": "No",
+                "(X) Seafaring skills": "Yes",
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(B) Piracy cost is ok": "No"
+            },
+            "Tail": {
+                "(B) Has piracy equipment": "Yes",
+                "(B) Has piracy skills": "Yes",
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.95,
+            "Head": {
+                "(X) Boarding skills": "No"
+            },
+            "Tail": {
+                "__Source__[(X) Boarding skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.3333333333333333,
+            "Head": {
+                "__Source__[(X) Boarding skills]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(B) Piracy cost is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Has piracy equipment": "No",
+                "(B) Has piracy skills": "No",
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.01,
+            "Head": {
+                "(B) Attitude towards piracy": "Positive"
+            },
+            "Tail": {
+                "__Source__[(B) Attitude towards piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.3333333333333333,
+            "Head": {
+                "__Source__[(B) Attitude towards piracy]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "(B) Has piracy skills": "No"
+            },
+            "Tail": {
+                "(X) Boarding skills": "No",
+                "(X) Seafaring skills": "Yes",
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(B) Piracy cost is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Has piracy equipment": "Yes",
+                "(B) Has piracy skills": "No",
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.6,
+            "Head": {
+                "(G) Livelihood is piracy": "No"
+            },
+            "Tail": {
+                "(B) Piracy benefit is ok": "No",
+                "(B) Piracy cost is ok": "Yes",
+                "(B) Attitude towards piracy": "Positive",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.005,
+            "Head": {
+                "(G) Livelihood is piracy": "Yes"
+            },
+            "Tail": {
+                "(B) Piracy benefit is ok": "No",
+                "(B) Attitude towards piracy": "Negative",
+                "(B) Piracy cost is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.6,
+            "Head": {
+                "(B) Has piracy equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Weapons are obtainable": "Yes",
+                "(B) Has a skiff": "No",
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(X) Seafaring skills": "Yes"
+            },
+            "Tail": {
+                "__Source__[(X) Seafaring skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(X) Seafaring skills]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(B) Has piracy skills": "No"
+            },
+            "Tail": {
+                "(X) Boarding skills": "Yes",
+                "(X) Seafaring skills": "Yes",
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "(G) Livelihood is piracy": "Yes"
+            },
+            "Tail": {
+                "(B) Piracy benefit is ok": "No",
+                "(B) Piracy cost is ok": "Yes",
+                "(B) Attitude towards piracy": "Positive",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.05,
+            "Head": {
+                "(G) Livelihood is piracy": "No"
+            },
+            "Tail": {
+                "(B) Piracy cost is ok": "Yes",
+                "(B) Attitude towards piracy": "Positive",
+                "(B) Piracy benefit is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.05,
+            "Head": {
+                "(B) Has piracy equipment": "No"
+            },
+            "Tail": {
+                "(B) Weapons are obtainable": "Yes",
+                "(B) Has a skiff": "Yes",
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(X) Seafaring skills": "No"
+            },
+            "Tail": {
+                "__Source__[(X) Seafaring skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(B) Piracy benefit is ok": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Piracy benefit is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Piracy benefit is ok]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(B) Piracy cost is ok": "No"
+            },
+            "Tail": {
+                "(B) Has piracy equipment": "Yes",
+                "(B) Has piracy skills": "No",
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.65,
+            "Head": {
+                "(B) Weapons are obtainable": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Weapons are obtainable]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Weapons are obtainable]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.95,
+            "Head": {
+                "(G) Livelihood is piracy": "No"
+            },
+            "Tail": {
+                "(B) Attitude towards piracy": "Negative",
+                "(B) Piracy cost is ok": "Yes",
+                "(B) Piracy benefit is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.995,
+            "Head": {
+                "(G) Livelihood is piracy": "No"
+            },
+            "Tail": {
+                "(B) Attitude towards piracy": "Negative",
+                "(B) Piracy cost is ok": "No",
+                "(B) Piracy benefit is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.95,
+            "Head": {
+                "(B) Has piracy equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Weapons are obtainable": "Yes",
+                "(B) Has a skiff": "Yes",
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(B) Piracy cost is ok": "No"
+            },
+            "Tail": {
+                "(B) Has piracy equipment": "No",
+                "(B) Has piracy skills": "No",
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(B) Has a skiff": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Has a skiff]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Has a skiff]": "{'3'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.99,
+            "Head": {
+                "(B) Attitude towards piracy": "Negative"
+            },
+            "Tail": {
+                "__Source__[(B) Attitude towards piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.05,
+            "Head": {
+                "(X) Boarding skills": "Yes"
+            },
+            "Tail": {
+                "__Source__[(X) Boarding skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.3,
+            "Head": {
+                "(G) Livelihood is piracy": "No"
+            },
+            "Tail": {
+                "(B) Piracy cost is ok": "No",
+                "(B) Attitude towards piracy": "Positive",
+                "(B) Piracy benefit is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.35,
+            "Head": {
+                "(B) Weapons are obtainable": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Weapons are obtainable]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(B) Has piracy skills": "No"
+            },
+            "Tail": {
+                "(X) Boarding skills": "No",
+                "(X) Seafaring skills": "No",
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(B) Piracy cost is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Has piracy equipment": "Yes",
+                "(B) Has piracy skills": "Yes",
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.001,
+            "Head": {
+                "(G) Livelihood is piracy": "Yes"
+            },
+            "Tail": {
+                "(B) Piracy benefit is ok": "No",
+                "(B) Attitude towards piracy": "Negative",
+                "(B) Piracy cost is ok": "No",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.005,
+            "Head": {
+                "(G) Livelihood is piracy": "Yes"
+            },
+            "Tail": {
+                "(B) Attitude towards piracy": "Negative",
+                "(B) Piracy cost is ok": "No",
+                "(B) Piracy benefit is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "(B) Has piracy equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Weapons are obtainable": "No",
+                "(B) Has a skiff": "Yes",
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "(G) Livelihood is piracy": "Yes"
+            },
+            "Tail": {
+                "(B) Piracy benefit is ok": "No",
+                "(B) Piracy cost is ok": "No",
+                "(B) Attitude towards piracy": "Positive",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.95,
+            "Head": {
+                "(G) Livelihood is piracy": "Yes"
+            },
+            "Tail": {
+                "(B) Piracy cost is ok": "Yes",
+                "(B) Attitude towards piracy": "Positive",
+                "(B) Piracy benefit is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "(B) Piracy cost is ok": "No"
+            },
+            "Tail": {
+                "(B) Has piracy equipment": "No",
+                "(B) Has piracy skills": "Yes",
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "(B) Has piracy equipment": "No"
+            },
+            "Tail": {
+                "(B) Weapons are obtainable": "Yes",
+                "(B) Has a skiff": "No",
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.6,
+            "Head": {
+                "(B) Has piracy equipment": "No"
+            },
+            "Tail": {
+                "(B) Weapons are obtainable": "No",
+                "(B) Has a skiff": "Yes",
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(B) Has piracy skills": "Yes"
+            },
+            "Tail": {
+                "(X) Boarding skills": "Yes",
+                "(X) Seafaring skills": "Yes",
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.01,
+            "Head": {
+                "(B) Has piracy equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Weapons are obtainable": "No",
+                "(B) Has a skiff": "No",
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "(B) Has piracy skills": "Yes"
+            },
+            "Tail": {
+                "(X) Boarding skills": "Yes",
+                "(X) Seafaring skills": "No",
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "(B) Piracy cost is ok": "Yes"
+            },
+            "Tail": {
+                "(B) Has piracy equipment": "No",
+                "(B) Has piracy skills": "Yes",
+                "__Source__[(B) Piracy cost is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(B) Has a skiff": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Has a skiff]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.999,
+            "Head": {
+                "(G) Livelihood is piracy": "No"
+            },
+            "Tail": {
+                "(B) Piracy benefit is ok": "No",
+                "(B) Attitude towards piracy": "Negative",
+                "(B) Piracy cost is ok": "No",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "(G) Livelihood is piracy": "No"
+            },
+            "Tail": {
+                "(B) Piracy benefit is ok": "No",
+                "(B) Piracy cost is ok": "No",
+                "(B) Attitude towards piracy": "Positive",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.05,
+            "Head": {
+                "(G) Livelihood is piracy": "Yes"
+            },
+            "Tail": {
+                "(B) Attitude towards piracy": "Negative",
+                "(B) Piracy cost is ok": "Yes",
+                "(B) Piracy benefit is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(B) Has piracy skills": "Yes"
+            },
+            "Tail": {
+                "(X) Boarding skills": "No",
+                "(X) Seafaring skills": "No",
+                "__Source__[(B) Has piracy skills]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.995,
+            "Head": {
+                "(G) Livelihood is piracy": "No"
+            },
+            "Tail": {
+                "(B) Piracy benefit is ok": "No",
+                "(B) Attitude towards piracy": "Negative",
+                "(B) Piracy cost is ok": "Yes",
+                "__Source__[(G) Livelihood is piracy]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.99,
+            "Head": {
+                "(B) Has piracy equipment": "No"
+            },
+            "Tail": {
+                "(B) Weapons are obtainable": "No",
+                "(B) Has a skiff": "No",
+                "__Source__[(B) Has piracy equipment]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.7,
+            "Head": {
+                "(B) Piracy benefit is ok": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Piracy benefit is ok]": "{'3'}"
+            }
+        },
+        {
+            "Probability": 0.15,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "No"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "No",
+                "(B) Has fishing equipment": "Yes",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.3333333333333333,
+            "Head": {
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.99,
+            "Head": {
+                "(B) Tsunami is destructive": "No"
+            },
+            "Tail": {
+                "(B) Tsunami just occurred": "No",
+                "__Source__[(B) Tsunami is destructive]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Tsunami is destructive]": "{'4'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.01,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "No"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "No",
+                "(B) Has fishing equipment": "No",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.2,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "Yes"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "Yes",
+                "(B) Has fishing equipment": "Yes",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.99,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "Yes"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "No",
+                "(B) Has fishing equipment": "No",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.2,
+            "Head": {
+                "(B) Tsunami is destructive": "No"
+            },
+            "Tail": {
+                "(B) Tsunami just occurred": "Yes",
+                "__Source__[(B) Tsunami is destructive]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(B) Has fishing equipment": "No"
+            },
+            "Tail": {
+                "(B) Tsunami is destructive": "Yes",
+                "__Source__[(B) Has fishing equipment]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(B) Has fishing equipment]": "{'4'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.01,
+            "Head": {
+                "(B) Tsunami is destructive": "Yes"
+            },
+            "Tail": {
+                "(B) Tsunami just occurred": "No",
+                "__Source__[(B) Tsunami is destructive]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.0,
+            "Head": {
+                "(B) Tsunami just occurred": "No"
+            },
+            "Tail": {
+                "__Source__[(B) Tsunami just occurred]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "__Source__[(B) Tsunami just occurred]": "{'4'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(B) Has (access to) a (fishing) boat": "No"
+            },
+            "Tail": {
+                "(B) Tsunami is destructive": "No",
+                "__Source__[(B) Has (access to) a (fishing) boat]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.5,
+            "Head": {
+                "__Source__[(B) Has (access to) a (fishing) boat]": "{'4'}"
+            },
+            "Tail": {}
+        },
+        {
+            "Probability": 0.85,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "Yes"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "No",
+                "(B) Has fishing equipment": "Yes",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.6,
+            "Head": {
+                "(B) Has (access to) a (fishing) boat": "No"
+            },
+            "Tail": {
+                "(B) Tsunami is destructive": "Yes",
+                "__Source__[(B) Has (access to) a (fishing) boat]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.8,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "No"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "Yes",
+                "(B) Has fishing equipment": "Yes",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.01,
+            "Head": {
+                "(B) Has fishing equipment": "No"
+            },
+            "Tail": {
+                "(B) Tsunami is destructive": "No",
+                "__Source__[(B) Has fishing equipment]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.45,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "No"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "Yes",
+                "(B) Has fishing equipment": "No",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.55,
+            "Head": {
+                "(B) Fishing livelihood is threatened": "Yes"
+            },
+            "Tail": {
+                "(B) Has (access to) a (fishing) boat": "Yes",
+                "(B) Has fishing equipment": "No",
+                "__Source__[(B) Fishing livelihood is threatened]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.99,
+            "Head": {
+                "(B) Has fishing equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Tsunami is destructive": "No",
+                "__Source__[(B) Has fishing equipment]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 1.0,
+            "Head": {
+                "(B) Tsunami just occurred": "Yes"
+            },
+            "Tail": {
+                "__Source__[(B) Tsunami just occurred]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.9,
+            "Head": {
+                "(B) Has (access to) a (fishing) boat": "Yes"
+            },
+            "Tail": {
+                "(B) Tsunami is destructive": "No",
+                "__Source__[(B) Has (access to) a (fishing) boat]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.1,
+            "Head": {
+                "(B) Has fishing equipment": "Yes"
+            },
+            "Tail": {
+                "(B) Tsunami is destructive": "Yes",
+                "__Source__[(B) Has fishing equipment]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.8,
+            "Head": {
+                "(B) Tsunami is destructive": "Yes"
+            },
+            "Tail": {
+                "(B) Tsunami just occurred": "Yes",
+                "__Source__[(B) Tsunami is destructive]": "{'4'}"
+            }
+        },
+        {
+            "Probability": 0.4,
+            "Head": {
+                "(B) Has (access to) a (fishing) boat": "Yes"
+            },
+            "Tail": {
+                "(B) Tsunami is destructive": "Yes",
+                "__Source__[(B) Has (access to) a (fishing) boat]": "{'4'}"
+            }
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+  "Name": "f3defa5d-8e5a-4cb1-8fbd-08f2182e53ec",
+  "Description": "Random bkb used to test json functionality.",
+  "Instatiation Nodes": {
+    "RV_3": [
+      0
+    ],
+    "RV_2": [
+      0
+    ],
+    "RV_1": [
+      2
+    ]
+  },
+  "Support Nodes": [
+    {
+      "Head": {
+        "RV_1": 2
+      },
+      "Probability": 0.9057551260540134,
+      "Tail": {}
+    },
+    {
+      "Head": {
+        "RV_2": 0
+      },
+      "Probability": 0.961779626127865,
+      "Tail": {}
+    },
+    {
+      "Head": {
+        "RV_3": 0
+      },
+      "Probability": 0.3706564149505228,
+      "Tail": {
+        "RV_2": 0,
+        "RV_1": 2
+      }
+    }
+  ]
+}

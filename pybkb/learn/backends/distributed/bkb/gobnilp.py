@@ -12,20 +12,13 @@ from pygobnilp.gobnilp import Gobnilp
 from gurobipy import GRB
 from ray.util.placement_group import placement_group, remove_placement_group
 from ray.util.scheduling_strategies import PlacementGroupSchedulingStrategy
-from ray.util import ActorPool
-from ray import workflow
 from multiprocessing import Pool
-from scipy.special import comb
-from sklearn.cluster import KMeans
-from scipy.spatial.distance import cdist
-from scipy.optimize import linear_sum_assignment
 
 from pybkb.utils.probability import *
 from pybkb.utils.mp import MPLogger
 from pybkb.scores import *
 from pybkb.learn.report import LearningReport
 from pybkb.bkb import BKB
-from pybkb.bn import BN
 from pybkb.learn.backends.bkb.gobnilp import BKBGobnilpBackend
 
 

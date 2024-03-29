@@ -1,0 +1,547 @@
+{
+ "Name": "Pirate",
+ "Instantiation Nodes": {
+  "(G) Livelihood is piracy": [
+   "No",
+   "Yes"
+  ],
+  "(B) Attitude towards piracy": [
+   "Positive",
+   "Negative"
+  ],
+  "(B) Weapons are obtainable": [
+   "No",
+   "Yes"
+  ],
+  "(B) Piracy benefit is ok": [
+   "No",
+   "Yes"
+  ],
+  "(B) Has piracy equipment": [
+   "No",
+   "Yes"
+  ],
+  "(B) Has piracy skills": [
+   "No",
+   "Yes"
+  ],
+  "(X) Boarding skills": [
+   "No",
+   "Yes"
+  ],
+  "(X) Seafaring skills": [
+   "No",
+   "Yes"
+  ],
+  "(B) Has a skiff": [
+   "No",
+   "Yes"
+  ],
+  "(B) Piracy cost is ok": [
+   "No",
+   "Yes"
+  ]
+ },
+ "Support Nodes": [
+  {
+   "Head": {
+    "(B) Has piracy skills": "No"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "(X) Boarding skills": "Yes",
+    "(X) Seafaring skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "Yes"
+   },
+   "Probability": 0.7,
+   "Tail": {
+    "(B) Attitude towards piracy": "Positive",
+    "(B) Piracy benefit is ok": "Yes",
+    "(B) Piracy cost is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy skills": "Yes"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "(X) Boarding skills": "No",
+    "(X) Seafaring skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Piracy cost is ok": "No"
+   },
+   "Probability": 0.3,
+   "Tail": {
+    "(B) Has piracy equipment": "Yes",
+    "(B) Has piracy skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(X) Boarding skills": "No"
+   },
+   "Probability": 0.95,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Piracy cost is ok": "Yes"
+   },
+   "Probability": 0.1,
+   "Tail": {
+    "(B) Has piracy equipment": "No",
+    "(B) Has piracy skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Positive"
+   },
+   "Probability": 0.01,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Has piracy skills": "No"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "(X) Boarding skills": "No",
+    "(X) Seafaring skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Piracy cost is ok": "Yes"
+   },
+   "Probability": 0.3,
+   "Tail": {
+    "(B) Has piracy equipment": "Yes",
+    "(B) Has piracy skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "No"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "(B) Attitude towards piracy": "Positive",
+    "(B) Piracy benefit is ok": "No",
+    "(B) Piracy cost is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "Yes"
+   },
+   "Probability": 0.005,
+   "Tail": {
+    "(B) Attitude towards piracy": "Negative",
+    "(B) Piracy benefit is ok": "No",
+    "(B) Piracy cost is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy equipment": "Yes"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "(B) Weapons are obtainable": "Yes",
+    "(B) Has a skiff": "No"
+   }
+  },
+  {
+   "Head": {
+    "(X) Seafaring skills": "Yes"
+   },
+   "Probability": 0.9,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Has piracy skills": "No"
+   },
+   "Probability": 0.1,
+   "Tail": {
+    "(X) Boarding skills": "Yes",
+    "(X) Seafaring skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "Yes"
+   },
+   "Probability": 0.4,
+   "Tail": {
+    "(B) Attitude towards piracy": "Positive",
+    "(B) Piracy benefit is ok": "No",
+    "(B) Piracy cost is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "No"
+   },
+   "Probability": 0.05,
+   "Tail": {
+    "(B) Attitude towards piracy": "Positive",
+    "(B) Piracy benefit is ok": "Yes",
+    "(B) Piracy cost is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy equipment": "No"
+   },
+   "Probability": 0.05,
+   "Tail": {
+    "(B) Weapons are obtainable": "Yes",
+    "(B) Has a skiff": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(X) Seafaring skills": "No"
+   },
+   "Probability": 0.1,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Piracy benefit is ok": "No"
+   },
+   "Probability": 0.3,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Piracy cost is ok": "No"
+   },
+   "Probability": 0.7,
+   "Tail": {
+    "(B) Has piracy equipment": "Yes",
+    "(B) Has piracy skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Weapons are obtainable": "No"
+   },
+   "Probability": 0.65,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "No"
+   },
+   "Probability": 0.95,
+   "Tail": {
+    "(B) Attitude towards piracy": "Negative",
+    "(B) Piracy benefit is ok": "Yes",
+    "(B) Piracy cost is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "No"
+   },
+   "Probability": 0.995,
+   "Tail": {
+    "(B) Attitude towards piracy": "Negative",
+    "(B) Piracy benefit is ok": "Yes",
+    "(B) Piracy cost is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy equipment": "Yes"
+   },
+   "Probability": 0.95,
+   "Tail": {
+    "(B) Weapons are obtainable": "Yes",
+    "(B) Has a skiff": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Piracy cost is ok": "No"
+   },
+   "Probability": 0.9,
+   "Tail": {
+    "(B) Has piracy equipment": "No",
+    "(B) Has piracy skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has a skiff": "Yes"
+   },
+   "Probability": 0.9,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Negative"
+   },
+   "Probability": 0.99,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(X) Boarding skills": "Yes"
+   },
+   "Probability": 0.05,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "No"
+   },
+   "Probability": 0.3,
+   "Tail": {
+    "(B) Attitude towards piracy": "Positive",
+    "(B) Piracy benefit is ok": "Yes",
+    "(B) Piracy cost is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Weapons are obtainable": "Yes"
+   },
+   "Probability": 0.35,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Has piracy skills": "No"
+   },
+   "Probability": 0.9,
+   "Tail": {
+    "(X) Boarding skills": "No",
+    "(X) Seafaring skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Piracy cost is ok": "Yes"
+   },
+   "Probability": 0.7,
+   "Tail": {
+    "(B) Has piracy equipment": "Yes",
+    "(B) Has piracy skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "Yes"
+   },
+   "Probability": 0.001,
+   "Tail": {
+    "(B) Attitude towards piracy": "Negative",
+    "(B) Piracy benefit is ok": "No",
+    "(B) Piracy cost is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "Yes"
+   },
+   "Probability": 0.005,
+   "Tail": {
+    "(B) Attitude towards piracy": "Negative",
+    "(B) Piracy benefit is ok": "Yes",
+    "(B) Piracy cost is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy equipment": "Yes"
+   },
+   "Probability": 0.4,
+   "Tail": {
+    "(B) Weapons are obtainable": "No",
+    "(B) Has a skiff": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "Yes"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "(B) Attitude towards piracy": "Positive",
+    "(B) Piracy benefit is ok": "No",
+    "(B) Piracy cost is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "Yes"
+   },
+   "Probability": 0.95,
+   "Tail": {
+    "(B) Attitude towards piracy": "Positive",
+    "(B) Piracy benefit is ok": "Yes",
+    "(B) Piracy cost is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Piracy cost is ok": "No"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "(B) Has piracy equipment": "No",
+    "(B) Has piracy skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy equipment": "No"
+   },
+   "Probability": 0.4,
+   "Tail": {
+    "(B) Weapons are obtainable": "Yes",
+    "(B) Has a skiff": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy equipment": "No"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "(B) Weapons are obtainable": "No",
+    "(B) Has a skiff": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy skills": "Yes"
+   },
+   "Probability": 0.9,
+   "Tail": {
+    "(X) Boarding skills": "Yes",
+    "(X) Seafaring skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy equipment": "Yes"
+   },
+   "Probability": 0.01,
+   "Tail": {
+    "(B) Weapons are obtainable": "No",
+    "(B) Has a skiff": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy skills": "Yes"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "(X) Boarding skills": "Yes",
+    "(X) Seafaring skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Piracy cost is ok": "Yes"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "(B) Has piracy equipment": "No",
+    "(B) Has piracy skills": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has a skiff": "No"
+   },
+   "Probability": 0.1,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "No"
+   },
+   "Probability": 0.999,
+   "Tail": {
+    "(B) Attitude towards piracy": "Negative",
+    "(B) Piracy benefit is ok": "No",
+    "(B) Piracy cost is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "No"
+   },
+   "Probability": 0.5,
+   "Tail": {
+    "(B) Attitude towards piracy": "Positive",
+    "(B) Piracy benefit is ok": "No",
+    "(B) Piracy cost is ok": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "Yes"
+   },
+   "Probability": 0.05,
+   "Tail": {
+    "(B) Attitude towards piracy": "Negative",
+    "(B) Piracy benefit is ok": "Yes",
+    "(B) Piracy cost is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy skills": "Yes"
+   },
+   "Probability": 0.1,
+   "Tail": {
+    "(X) Boarding skills": "No",
+    "(X) Seafaring skills": "No"
+   }
+  },
+  {
+   "Head": {
+    "(G) Livelihood is piracy": "No"
+   },
+   "Probability": 0.995,
+   "Tail": {
+    "(B) Attitude towards piracy": "Negative",
+    "(B) Piracy benefit is ok": "No",
+    "(B) Piracy cost is ok": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has piracy equipment": "No"
+   },
+   "Probability": 0.99,
+   "Tail": {
+    "(B) Weapons are obtainable": "No",
+    "(B) Has a skiff": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Piracy benefit is ok": "Yes"
+   },
+   "Probability": 0.7,
+   "Tail": {}
+  }
+ ]
+}

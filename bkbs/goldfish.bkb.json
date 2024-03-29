@@ -1,0 +1,3391 @@
+{
+ "Name": "fbadff39-7638-4889-9a0d-dc7fc09d3d61",
+ "Instantiation Nodes": {
+  "[W] pH Level": [
+   "[6.8 - 7.0)",
+   "[6.4 - 6.6)",
+   "[7.4 - 7.6)",
+   "[7.8 - 8.0)",
+   "[8.2 - 8.4)",
+   "[7.2 - 7.4)",
+   "[8.6 - 8.8)",
+   "[8.8 - 9.0)",
+   "More than 9.0",
+   "Less than 6.0",
+   "(7.0 - 7.2)",
+   "7.0",
+   "[8.0 - 8.2)",
+   "[8.4 - 8.6)",
+   "[6.6 - 6.8)",
+   "[6.2 - 6.4)",
+   "[7.6 - 7.8)",
+   "[6.0 - 6.2)"
+  ],
+  "[W] Clarity": [
+   "Clear",
+   "Powdery",
+   "Murky"
+  ],
+  "[W] Color": [
+   "Clear",
+   "Yellow",
+   "Green",
+   "Yellow and Green"
+  ],
+  "[W] Odor": [
+   "Decaying",
+   "None"
+  ],
+  "[W] Chlorine Level": [
+   "[2 - 3] ppm",
+   "[.25 - .50] ppm",
+   "[4 - 5] ppm",
+   "0 ppm",
+   "[.75 - 1] ppm"
+  ],
+  "[W] Ammonia Level": [
+   "[6 - 7] ppm",
+   "[2 - 3] ppm",
+   "[.5 - 1] ppm",
+   "[4 - 5] ppm",
+   "0 ppm"
+  ],
+  "[Objects] Cleanliness": [
+   "Brown/Green film or coating",
+   "Clean"
+  ],
+  "[W] Algae": [
+   "Present",
+   "None"
+  ],
+  "[F] Fin Position": [
+   "Clamped to Body",
+   "Spread"
+  ],
+  "[F] Breathing": [
+   "Labored",
+   "Normal",
+   "Rapid"
+  ],
+  "[W] Nitrite Level": [
+   "[.5 - 1) ppm",
+   "[2 - 3) ppm",
+   "[.25 - .5) ppm",
+   "[1 - 2) ppm",
+   ">= 3 ppm",
+   "0 ppm"
+  ],
+  "[F] Appetite": [
+   "Limited/None",
+   "Normal"
+  ],
+  "[F] Stress Level": [
+   "Mild",
+   "Major",
+   "Moderate",
+   "None"
+  ],
+  "[W] pH Level >= 7.2": [
+   "False",
+   "True"
+  ],
+  "[W] Ammonia 3-Level": [
+   "None/Low",
+   "Moderate",
+   "High"
+  ],
+  "[D] Ammonia Poisoning": [
+   "False",
+   "True"
+  ],
+  "[F] Organ Failure": [
+   "True",
+   "False"
+  ],
+  "[F] Bloody Fins": [
+   "False",
+   "True"
+  ],
+  "[F] Blood Congestion in Body Parts": [
+   "False",
+   "True"
+  ],
+  "[D] Ammonia Burns": [
+   "False",
+   "True"
+  ],
+  "[F] Blackened Fins": [
+   "False",
+   "True"
+  ],
+  "[F] Blackened Body Parts": [
+   "False",
+   "True"
+  ],
+  "[D] Bacterial Infection": [
+   "True",
+   "False"
+  ],
+  "[W] Water Condition": [
+   "Alkaline",
+   "Neutral",
+   "Acid"
+  ],
+  "[W] Chloromine": [
+   "Present",
+   "Not Present"
+  ],
+  "[W] Chlorine": [
+   "Present",
+   "Not Present"
+  ],
+  "[F] Nitrite Poisoning": [
+   "True",
+   "False"
+  ],
+  "[W] Nitrate": [
+   "Present",
+   "Not Present"
+  ],
+  "[F] Scales": [
+   "Missing Scales",
+   "Normal",
+   "Protruding"
+  ],
+  "[F] Fins": [
+   "Torn/frayed/eroded",
+   "Normal"
+  ],
+  "[F] Body Growth": [
+   "On fins",
+   "On head and body",
+   "None",
+   "On fins and body",
+   "On head",
+   "On body"
+  ],
+  "[F] Skin": [
+   "Moldy slime",
+   "Normal",
+   "Heavy slime"
+  ],
+  "[W] Fish waste": [
+   "Present",
+   "Not Present"
+  ],
+  "[F] Fish Color": [
+   "Discolored - greyish",
+   "Normal",
+   "Poor color",
+   "Discolored - yellowish"
+  ],
+  "[F] Fish Appearance": [
+   "Healthy",
+   "Swollen/bloated",
+   "Thin/weak"
+  ],
+  "[F] Fish Behavior": [
+   "Listless",
+   "Normal",
+   "Poor swimming ability",
+   "Scratching against tank objects",
+   "Darting movements"
+  ],
+  "[W] Decaying Food": [
+   "Present",
+   "Not Present"
+  ],
+  "[D] Itching": [
+   "True",
+   "False"
+  ],
+  "[D] Rot": [
+   "True",
+   "False"
+  ],
+  "[D] Saprolegnia": [
+   "True",
+   "False"
+  ],
+  "[D] Gill Flukes": [
+   "True",
+   "False"
+  ],
+  "[D] Gyrodactylus": [
+   "True",
+   "False"
+  ],
+  "[W] Water Temperature": [
+   "> 72 F",
+   "(65 - 72] F",
+   "(32 - 45] F",
+   "(45 - 65] F"
+  ],
+  "[F] Spots": [
+   "Black spots",
+   "Red spots",
+   "White spots",
+   "None"
+  ],
+  "[D] Dropsy": [
+   "True",
+   "False"
+  ],
+  "[D] Ich (White Spot)": [
+   "True",
+   "False"
+  ],
+  "[D] Velvet": [
+   "True",
+   "False"
+  ],
+  "[D] Costiasis": [
+   "True",
+   "False"
+  ],
+  "[D] Fungus": [
+   "True",
+   "False"
+  ],
+  "[W] Water Quality": [
+   "Good",
+   "Poor"
+  ],
+  "[D] Beta Finch Fin": [
+   "True",
+   "False"
+  ],
+  "[D] Black Spot": [
+   "True",
+   "False"
+  ],
+  "[D] Columnaris": [
+   "True",
+   "False"
+  ],
+  "[D] Dactylogyrus": [
+   "True",
+   "False"
+  ],
+  "[D] Discus Head Worms": [
+   "True",
+   "False"
+  ],
+  "[W] Nitrite 3-Level": [
+   "None/Low",
+   "Moderate",
+   "High"
+  ],
+  "[F] Parasites": [
+   "Present",
+   "Not Present"
+  ]
+ },
+ "Support Nodes": [
+  {
+   "Head": {
+    "[F] Nitrite Poisoning": "True"
+   },
+   "Probability": 0.363385,
+   "Tail": {
+    "[W] Nitrite Level": "[1 - 2) ppm"
+   }
+  },
+  {
+   "Head": {
+    "[D] Ammonia Poisoning": "False"
+   },
+   "Probability": 0.39972,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Parasites": "Present"
+   },
+   "Probability": 0.315973,
+   "Tail": {
+    "[F] Stress Level": "Mild",
+    "[F] Fish Appearance": "Thin/weak",
+    "[W] Water Quality": "Good"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.4 - 6.6)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Color": "Discolored - yellowish"
+   },
+   "Probability": 0.368135,
+   "Tail": {
+    "[W] Water Condition": "Acid",
+    "[D] Velvet": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Odor": "Decaying"
+   },
+   "Probability": 0.553321,
+   "Tail": {
+    "[W] Fish waste": "Present",
+    "[W] Decaying Food": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrite 3-Level": "None/Low"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Nitrite Level": "0 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Scales": "Normal"
+   },
+   "Probability": 0.499598,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.2 - 8.4)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Moderate"
+   },
+   "Probability": 0.749925,
+   "Tail": {
+    "[Objects] Cleanliness": "Brown/Green film or coating",
+    "[W] Water Temperature": "(45 - 65] F",
+    "[W] Nitrite 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.2 - 8.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrite 3-Level": "Moderate"
+   },
+   "Probability": 0.999429,
+   "Tail": {
+    "[W] Nitrite Level": "[.25 - .5) ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.8 - 8.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Fish waste": "Present"
+   },
+   "Probability": 0.447621,
+   "Tail": {
+    "[W] pH Level >= 7.2": "True",
+    "[W] Ammonia 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "More than 9.0"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Not Present"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] Chlorine Level": "[.75 - 1] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "None"
+   },
+   "Probability": 0.225689,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fins": "Torn/frayed/eroded"
+   },
+   "Probability": 0.637663,
+   "Tail": {
+    "[W] Water Condition": "Alkaline",
+    "[D] Rot": "True",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.6 - 8.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[7.2 - 7.4)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Clamped to Body"
+   },
+   "Probability": 0.981612,
+   "Tail": {
+    "[W] Ammonia Level": "[6 - 7] ppm",
+    "[D] Beta Finch Fin": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Mild"
+   },
+   "Probability": 0.675196,
+   "Tail": {
+    "[W] Water Temperature": "(32 - 45] F",
+    "[W] Nitrite 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.2 - 8.4)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Parasites": "Not Present"
+   },
+   "Probability": 0.451297,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fins": "Torn/frayed/eroded"
+   },
+   "Probability": 0.501753,
+   "Tail": {
+    "[W] Water Condition": "Acid",
+    "[D] Rot": "True",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[D] Bacterial Infection": "True"
+   },
+   "Probability": 0.394797,
+   "Tail": {
+    "[W] Ammonia 3-Level": "Moderate",
+    "[F] Blackened Fins": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Gyrodactylus": "False"
+   },
+   "Probability": 0.525554,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Dropsy": "True"
+   },
+   "Probability": 0.471358,
+   "Tail": {
+    "[W] Ammonia 3-Level": "Moderate",
+    "[F] Nitrite Poisoning": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Chlorine Level": "[2 - 3] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[D] Gill Flukes": "False"
+   },
+   "Probability": 0.695533,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level": "7.0"
+   },
+   "Probability": 0.13344,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "Less than 6.0"
+   }
+  },
+  {
+   "Head": {
+    "[F] Body Growth": "On fins"
+   },
+   "Probability": 0.0776913,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Decaying Food": "Present"
+   },
+   "Probability": 0.434595,
+   "Tail": {
+    "[W] pH Level >= 7.2": "True",
+    "[W] Ammonia 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Appearance": "Swollen/bloated"
+   },
+   "Probability": 0.408061,
+   "Tail": {
+    "[D] Dropsy": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Color": "Clear"
+   },
+   "Probability": 0.587026,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Body Growth": "On head and body"
+   },
+   "Probability": 0.0698023,
+   "Tail": {
+    "[D] Fungus": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "7.0"
+   }
+  },
+  {
+   "Head": {
+    "[F] Bloody Fins": "False"
+   },
+   "Probability": 0.348748,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Nitrite Level": "[2 - 3) ppm"
+   },
+   "Probability": 0.0732347,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Scales": "Protruding"
+   },
+   "Probability": 0.388002,
+   "Tail": {
+    "[D] Dropsy": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Color": "Discolored - yellowish"
+   },
+   "Probability": 0.419441,
+   "Tail": {
+    "[W] Water Condition": "Neutral",
+    "[D] Velvet": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Beta Finch Fin": "True"
+   },
+   "Probability": 0.332254,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[F] Appetite": "Limited/None"
+   },
+   "Probability": 0.662959,
+   "Tail": {
+    "[F] Stress Level": "Moderate",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.0 - 6.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Fish waste": "Present"
+   },
+   "Probability": 0.553183,
+   "Tail": {
+    "[W] pH Level >= 7.2": "False",
+    "[W] Ammonia 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chloromine": "Not Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[W] Chlorine": "Not Present"
+   }
+  },
+  {
+   "Head": {
+    "[D] Dropsy": "False"
+   },
+   "Probability": 0.443914,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.6 - 6.8)"
+   }
+  },
+  {
+   "Head": {
+    "[D] Itching": "False"
+   },
+   "Probability": 0.662528,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Bacterial Infection": "True"
+   },
+   "Probability": 0.49908,
+   "Tail": {
+    "[W] Ammonia 3-Level": "None/Low",
+    "[F] Blackened Fins": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Body Growth": "On body"
+   },
+   "Probability": 0.0979575,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Nitrite Level": "0 ppm"
+   },
+   "Probability": 0.297743,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[7.8 - 8.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Ammonia Level": "[6 - 7] ppm"
+   },
+   "Probability": 0.129274,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level": "Less than 6.0"
+   },
+   "Probability": 0.00135733,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.4 - 6.6)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Major"
+   },
+   "Probability": 0.402524,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[W] Water Temperature": "> 72 F",
+    "[W] Nitrite 3-Level": "None/Low"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[7.8 - 8.0)"
+   },
+   "Probability": 0.0375789,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Nitrite Poisoning": "True"
+   },
+   "Probability": 0.140245,
+   "Tail": {
+    "[W] Nitrite Level": "[.25 - .5) ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.6 - 6.8)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Body Growth": "On head"
+   },
+   "Probability": 0.0620564,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.8 - 7.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.6 - 7.8)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Parasites": "Present"
+   },
+   "Probability": 0.432017,
+   "Tail": {
+    "[F] Stress Level": "Mild",
+    "[F] Fish Appearance": "Thin/weak",
+    "[W] Water Quality": "Poor"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Poor swimming ability"
+   },
+   "Probability": 0.0415035,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Breathing": "Labored"
+   },
+   "Probability": 0.157536,
+   "Tail": {
+    "[D] Velvet": "True",
+    "[D] Dactylogyrus": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine Level": "[2 - 3] ppm"
+   },
+   "Probability": 0.066314,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Nitrite Level": "[.5 - 1) ppm"
+   },
+   "Probability": 0.211389,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Skin": "Heavy slime"
+   },
+   "Probability": 0.689511,
+   "Tail": {
+    "[W] Nitrate": "Present",
+    "[D] Costiasis": "True",
+    "[W] Water Quality": "Good"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Temperature": "> 72 F"
+   },
+   "Probability": 0.370805,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Bloody Fins": "True"
+   },
+   "Probability": 0.651252,
+   "Tail": {
+    "[D] Ammonia Poisoning": "True",
+    "[D] Bacterial Infection": "True",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Quality": "Good"
+   },
+   "Probability": 0.673736,
+   "Tail": {
+    "[W] Clarity": "Clear",
+    "[W] Color": "Clear",
+    "[W] Odor": "None",
+    "[W] Ammonia Level": "0 ppm",
+    "[W] Chloromine": "Not Present",
+    "[W] Nitrate": "Not Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.4 - 7.6)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Ammonia Level": "[4 - 5] ppm"
+   },
+   "Probability": 0.104912,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[6.0 - 6.2)"
+   },
+   "Probability": 0.0023149,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Blackened Fins": "True"
+   },
+   "Probability": 0.538743,
+   "Tail": {
+    "[D] Ammonia Burns": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Columnaris": "False"
+   },
+   "Probability": 0.656142,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Costiasis": "True"
+   },
+   "Probability": 0.401257,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[F] Spots": "None"
+   },
+   "Probability": 0.301435,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Quality": "Poor"
+   },
+   "Probability": 0.326264,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Saprolegnia": "False"
+   },
+   "Probability": 0.6197,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Discus Head Worms": "True"
+   },
+   "Probability": 0.321051,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Mild"
+   },
+   "Probability": 0.62052,
+   "Tail": {
+    "[W] Water Temperature": "(32 - 45] F",
+    "[W] Nitrite 3-Level": "Moderate"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.4 - 6.6)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Scratching against tank objects"
+   },
+   "Probability": 0.347894,
+   "Tail": {
+    "[D] Itching": "False",
+    "[D] Gyrodactylus": "True",
+    "[D] Ich (White Spot)": "False",
+    "[D] Velvet": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Algae": "Present"
+   },
+   "Probability": 0.282732,
+   "Tail": {
+    "[W] Color": "Green",
+    "[W] Water Condition": "Neutral"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fins": "Torn/frayed/eroded"
+   },
+   "Probability": 0.751255,
+   "Tail": {
+    "[W] Water Condition": "Alkaline",
+    "[D] Rot": "False",
+    "[D] Costiasis": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Columnaris": "True"
+   },
+   "Probability": 0.111562,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "7.0"
+   }
+  },
+  {
+   "Head": {
+    "[W] Decaying Food": "Present"
+   },
+   "Probability": 0.614934,
+   "Tail": {
+    "[W] pH Level >= 7.2": "False",
+    "[W] Ammonia 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fins": "Torn/frayed/eroded"
+   },
+   "Probability": 0.453841,
+   "Tail": {
+    "[W] Water Condition": "Neutral",
+    "[D] Rot": "True",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Temperature": "(65 - 72] F"
+   },
+   "Probability": 0.332279,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Clamped to Body"
+   },
+   "Probability": 0.723746,
+   "Tail": {
+    "[W] Ammonia Level": "[4 - 5] ppm",
+    "[D] Beta Finch Fin": "False"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Scratching against tank objects"
+   },
+   "Probability": 0.162819,
+   "Tail": {
+    "[D] Itching": "False",
+    "[D] Gyrodactylus": "False",
+    "[D] Ich (White Spot)": "False",
+    "[D] Velvet": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Skin": "Moldy slime"
+   },
+   "Probability": 0.35063,
+   "Tail": {
+    "[W] Water Quality": "Poor"
+   }
+  },
+  {
+   "Head": {
+    "[D] Black Spot": "True"
+   },
+   "Probability": 0.195844,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Fish waste": "Present"
+   },
+   "Probability": 0.478348,
+   "Tail": {
+    "[W] pH Level >= 7.2": "False",
+    "[W] Ammonia 3-Level": "Moderate"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[6.4 - 6.6)"
+   },
+   "Probability": 0.0286254,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Decaying Food": "Not Present"
+   },
+   "Probability": 0.385066,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Ammonia Level": "[2 - 3] ppm"
+   },
+   "Probability": 0.159183,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Ammonia 3-Level": "Moderate"
+   },
+   "Probability": 0.995395,
+   "Tail": {
+    "[W] Ammonia Level": "[.5 - 1] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine Level": "0 ppm"
+   },
+   "Probability": 0.452504,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Costiasis": "False"
+   },
+   "Probability": 0.598743,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.0 - 8.2)"
+   }
+  },
+  {
+   "Head": {
+    "[D] Bacterial Infection": "False"
+   },
+   "Probability": 0.31825,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Ich (White Spot)": "False"
+   },
+   "Probability": 0.679321,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.6 - 6.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.4 - 8.6)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.4 - 8.6)"
+   }
+  },
+  {
+   "Head": {
+    "[D] Ammonia Burns": "True"
+   },
+   "Probability": 0.522988,
+   "Tail": {
+    "[W] Ammonia Level": "[6 - 7] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Spots": "Black spots"
+   },
+   "Probability": 0.289991,
+   "Tail": {
+    "[D] Ammonia Poisoning": "True",
+    "[D] Ich (White Spot)": "False",
+    "[D] Black Spot": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Clarity": "Powdery"
+   },
+   "Probability": 0.18229,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.8 - 9.0)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Blackened Body Parts": "False"
+   },
+   "Probability": 0.436001,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fish Color": "Discolored - yellowish"
+   },
+   "Probability": 0.302805,
+   "Tail": {
+    "[W] Water Condition": "Acid",
+    "[D] Velvet": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Temperature": "(32 - 45] F"
+   },
+   "Probability": 0.104881,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Mild"
+   },
+   "Probability": 0.633951,
+   "Tail": {
+    "[W] Water Temperature": "(32 - 45] F",
+    "[W] Nitrite 3-Level": "None/Low"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fins": "Torn/frayed/eroded"
+   },
+   "Probability": 0.649536,
+   "Tail": {
+    "[W] Water Condition": "Neutral",
+    "[D] Rot": "False",
+    "[D] Costiasis": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Bacterial Infection": "True"
+   },
+   "Probability": 0.68175,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[F] Blackened Fins": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Not Present"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] Chlorine Level": "[2 - 3] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.4 - 8.6)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Skin": "Heavy slime"
+   },
+   "Probability": 0.397163,
+   "Tail": {
+    "[W] Nitrate": "Present",
+    "[D] Costiasis": "False",
+    "[W] Water Quality": "Good"
+   }
+  },
+  {
+   "Head": {
+    "[F] Body Growth": "None"
+   },
+   "Probability": 0.392104,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Appetite": "Normal"
+   },
+   "Probability": 0.889037,
+   "Tail": {
+    "[F] Stress Level": "None",
+    "[W] Water Temperature": "(65 - 72] F"
+   }
+  },
+  {
+   "Head": {
+    "[F] Body Growth": "On fins and body"
+   },
+   "Probability": 0.300388,
+   "Tail": {
+    "[D] Columnaris": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrite 3-Level": "High"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Nitrite Level": ">= 3 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Appearance": "Thin/weak"
+   },
+   "Probability": 0.135944,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.2 - 6.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrite 3-Level": "High"
+   },
+   "Probability": 0.851492,
+   "Tail": {
+    "[W] Nitrite Level": "[1 - 2) ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Major"
+   },
+   "Probability": 0.559321,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[W] Water Temperature": "> 72 F",
+    "[W] Nitrite 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[D] Dactylogyrus": "True"
+   },
+   "Probability": 0.46431,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.8 - 7.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.0 - 8.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.0 - 8.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.4 - 6.6)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.2 - 6.4)"
+   }
+  },
+  {
+   "Head": {
+    "[D] Dropsy": "True"
+   },
+   "Probability": 0.50134,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[F] Nitrite Poisoning": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[6.2 - 6.4)"
+   },
+   "Probability": 0.0109222,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.6 - 8.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.2 - 7.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.2 - 7.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.6 - 8.8)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Darting movements"
+   },
+   "Probability": 0.228597,
+   "Tail": {
+    "[W] Chlorine": "Present",
+    "[D] Discus Head Worms": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Ammonia 3-Level": "High"
+   },
+   "Probability": 0.932823,
+   "Tail": {
+    "[W] Ammonia Level": "[6 - 7] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Parasites": "Present"
+   },
+   "Probability": 0.533448,
+   "Tail": {
+    "[F] Stress Level": "Major",
+    "[F] Fish Appearance": "Thin/weak",
+    "[W] Water Quality": "Good"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.0 - 8.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[7.2 - 7.4)"
+   },
+   "Probability": 0.13344,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fish Color": "Normal"
+   },
+   "Probability": 0.268342,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Present"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] Chlorine Level": "0 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Moderate"
+   },
+   "Probability": 0.667235,
+   "Tail": {
+    "[Objects] Cleanliness": "Clean",
+    "[W] Water Temperature": "(45 - 65] F",
+    "[W] Nitrite 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[W] Algae": "Present"
+   },
+   "Probability": 0.588191,
+   "Tail": {
+    "[W] Color": "Green",
+    "[W] Water Condition": "Alkaline"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Chlorine Level": "[.25 - .50] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[D] Velvet": "True"
+   },
+   "Probability": 0.398555,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Chlorine Level": "[.75 - 1] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[D] Dactylogyrus": "False"
+   },
+   "Probability": 0.53569,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Clamped to Body"
+   },
+   "Probability": 0.984666,
+   "Tail": {
+    "[W] Ammonia Level": "[4 - 5] ppm",
+    "[D] Beta Finch Fin": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[8.0 - 8.2)"
+   },
+   "Probability": 0.0234614,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Breathing": "Rapid"
+   },
+   "Probability": 0.39355,
+   "Tail": {
+    "[D] Ammonia Poisoning": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Breathing": "Rapid"
+   },
+   "Probability": 0.311869,
+   "Tail": {
+    "[D] Ammonia Poisoning": "False",
+    "[W] Chlorine": "Present",
+    "[F] Nitrite Poisoning": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Algae": "Present"
+   },
+   "Probability": 0.306112,
+   "Tail": {
+    "[W] Color": "Clear",
+    "[W] Water Condition": "Alkaline"
+   }
+  },
+  {
+   "Head": {
+    "[W] Clarity": "Murky"
+   },
+   "Probability": 0.354662,
+   "Tail": {
+    "[W] Fish waste": "Present",
+    "[W] Decaying Food": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] Clarity": "Murky"
+   },
+   "Probability": 0.436744,
+   "Tail": {
+    "[W] Fish waste": "Present",
+    "[W] Decaying Food": "Not Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.6 - 6.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "(7.0 - 7.2)"
+   },
+   "Probability": 0.297562,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Gill Flukes": "True"
+   },
+   "Probability": 0.304467,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[6.8 - 7.0)"
+   },
+   "Probability": 0.0929415,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Clarity": "Clear"
+   },
+   "Probability": 0.380966,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "(7.0 - 7.2)"
+   }
+  },
+  {
+   "Head": {
+    "[D] Fungus": "False"
+   },
+   "Probability": 0.512775,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Dropsy": "True"
+   },
+   "Probability": 0.556086,
+   "Tail": {
+    "[W] Ammonia 3-Level": "None/Low",
+    "[F] Nitrite Poisoning": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Nitrite Poisoning": "True"
+   },
+   "Probability": 0.736872,
+   "Tail": {
+    "[W] Nitrite Level": "[2 - 3) ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Clamped to Body"
+   },
+   "Probability": 0.930777,
+   "Tail": {
+    "[W] Ammonia Level": "[6 - 7] ppm",
+    "[D] Beta Finch Fin": "False"
+   }
+  },
+  {
+   "Head": {
+    "[F] Organ Failure": "True"
+   },
+   "Probability": 0.562849,
+   "Tail": {
+    "[D] Ammonia Poisoning": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Spread"
+   },
+   "Probability": 0.900542,
+   "Tail": {
+    "[W] Ammonia Level": "0 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Bloody Fins": "True"
+   },
+   "Probability": 0.638005,
+   "Tail": {
+    "[D] Ammonia Poisoning": "False",
+    "[D] Bacterial Infection": "True",
+    "[D] Costiasis": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Scratching against tank objects"
+   },
+   "Probability": 0.284509,
+   "Tail": {
+    "[D] Itching": "False",
+    "[D] Gyrodactylus": "False",
+    "[D] Ich (White Spot)": "True",
+    "[D] Velvet": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "(7.0 - 7.2)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Parasites": "Present"
+   },
+   "Probability": 0.385675,
+   "Tail": {
+    "[F] Stress Level": "Moderate",
+    "[F] Fish Appearance": "Thin/weak",
+    "[W] Water Quality": "Poor"
+   }
+  },
+  {
+   "Head": {
+    "[D] Gyrodactylus": "True"
+   },
+   "Probability": 0.474446,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "More than 9.0"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.2 - 6.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Ammonia 3-Level": "Moderate"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] Ammonia Level": "0 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine Level": "[.25 - .50] ppm"
+   },
+   "Probability": 0.255953,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.2 - 6.4)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Breathing": "Rapid"
+   },
+   "Probability": 0.469875,
+   "Tail": {
+    "[D] Ammonia Poisoning": "False",
+    "[F] Nitrite Poisoning": "True",
+    "[D] Dactylogyrus": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[8.8 - 9.0)"
+   },
+   "Probability": 0.00123584,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Blackened Body Parts": "True"
+   },
+   "Probability": 0.563999,
+   "Tail": {
+    "[D] Ammonia Burns": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "7.0"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Color": "Poor color"
+   },
+   "Probability": 0.121305,
+   "Tail": {
+    "[W] Nitrate": "Not Present",
+    "[W] Water Temperature": "> 72 F"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Clamped to Body"
+   },
+   "Probability": 0.645967,
+   "Tail": {
+    "[W] Ammonia Level": "[.5 - 1] ppm",
+    "[D] Beta Finch Fin": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Algae": "Present"
+   },
+   "Probability": 0.466653,
+   "Tail": {
+    "[W] Color": "Yellow and Green",
+    "[W] Water Condition": "Alkaline"
+   }
+  },
+  {
+   "Head": {
+    "[W] Ammonia 3-Level": "None/Low"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Ammonia Level": "0 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chloromine": "Not Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Ammonia 3-Level": "None/Low",
+    "[W] Chlorine": "Not Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.8 - 8.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.8 - 8.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.8 - 7.0)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Scratching against tank objects"
+   },
+   "Probability": 0.39138,
+   "Tail": {
+    "[D] Itching": "True",
+    "[D] Gyrodactylus": "False",
+    "[D] Ich (White Spot)": "False",
+    "[D] Velvet": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.0 - 6.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "More than 9.0"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "More than 9.0"
+   }
+  },
+  {
+   "Head": {
+    "[F] Blackened Fins": "False"
+   },
+   "Probability": 0.461257,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Dropsy": "True"
+   },
+   "Probability": 0.461365,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[F] Nitrite Poisoning": "False"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fins": "Normal"
+   },
+   "Probability": 0.248745,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Appetite": "Limited/None"
+   },
+   "Probability": 0.957019,
+   "Tail": {
+    "[F] Stress Level": "Major",
+    "[D] Costiasis": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Discus Head Worms": "False"
+   },
+   "Probability": 0.678949,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[7.8 - 8.0)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Appearance": "Healthy"
+   },
+   "Probability": 0.455995,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "More than 9.0"
+   }
+  },
+  {
+   "Head": {
+    "[D] Beta Finch Fin": "False"
+   },
+   "Probability": 0.667746,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Nitrite 3-Level": "High"
+   },
+   "Probability": 0.945232,
+   "Tail": {
+    "[W] Nitrite Level": "[2 - 3) ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Chlorine Level": "[4 - 5] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fins": "Torn/frayed/eroded"
+   },
+   "Probability": 0.633731,
+   "Tail": {
+    "[W] Water Condition": "Acid",
+    "[D] Rot": "False",
+    "[D] Costiasis": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Ammonia Burns": "True"
+   },
+   "Probability": 0.46358,
+   "Tail": {
+    "[W] Ammonia Level": "[2 - 3] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Parasites": "Present"
+   },
+   "Probability": 0.50959,
+   "Tail": {
+    "[F] Stress Level": "Moderate",
+    "[F] Fish Appearance": "Thin/weak",
+    "[W] Water Quality": "Good"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrate": "Not Present"
+   },
+   "Probability": 0.519519,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Appetite": "Limited/None"
+   },
+   "Probability": 0.540736,
+   "Tail": {
+    "[F] Stress Level": "Mild",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Algae": "Present"
+   },
+   "Probability": 0.396806,
+   "Tail": {
+    "[W] Color": "Green",
+    "[W] Water Condition": "Acid"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[7.6 - 7.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Fish waste": "Present"
+   },
+   "Probability": 0.37888,
+   "Tail": {
+    "[W] pH Level >= 7.2": "True",
+    "[W] Ammonia 3-Level": "Moderate"
+   }
+  },
+  {
+   "Head": {
+    "[D] Rot": "False"
+   },
+   "Probability": 0.767748,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Clarity": "Murky"
+   },
+   "Probability": 0.374445,
+   "Tail": {
+    "[W] Fish waste": "Not Present",
+    "[W] Decaying Food": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.2 - 6.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.4 - 7.6)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chloromine": "Present"
+   },
+   "Probability": 0.784167,
+   "Tail": {
+    "[W] Ammonia 3-Level": "Moderate",
+    "[W] Chlorine": "Present",
+    "[F] Fish Behavior": "Listless"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Not Present"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] Chlorine Level": "[.25 - .50] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Color": "Green"
+   },
+   "Probability": 0.105391,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Chlorine Level": "[.75 - 1] ppm"
+   },
+   "Probability": 0.179381,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Ammonia 3-Level": "High"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] Ammonia Level": "0 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chloromine": "Present"
+   },
+   "Probability": 0.649734,
+   "Tail": {
+    "[W] Ammonia 3-Level": "Moderate",
+    "[W] Chlorine": "Present",
+    "[F] Fish Behavior": "Poor swimming ability"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chloromine": "Not Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Ammonia 3-Level": "Moderate",
+    "[W] Chlorine": "Not Present"
+   }
+  },
+  {
+   "Head": {
+    "[D] Rot": "True"
+   },
+   "Probability": 0.124132,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Appetite": "Limited/None"
+   },
+   "Probability": 0.65782,
+   "Tail": {
+    "[F] Stress Level": "Mild",
+    "[D] Costiasis": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "(7.0 - 7.2)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Major"
+   },
+   "Probability": 0.685259,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[W] Water Temperature": "> 72 F",
+    "[W] Nitrite 3-Level": "Moderate"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Not Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Chlorine Level": "0 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[D] Fungus": "True"
+   },
+   "Probability": 0.487225,
+   "Tail": {
+    "[F] Fish Color": "Discolored - greyish"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrite Level": "[.25 - .5) ppm"
+   },
+   "Probability": 0.213056,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.8 - 7.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.6 - 7.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.6 - 7.8)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Listless"
+   },
+   "Probability": 0.0391134,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Body Growth": "On fins and body"
+   },
+   "Probability": 0.167191,
+   "Tail": {
+    "[D] Columnaris": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Normal"
+   },
+   "Probability": 0.261749,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Skin": "Normal"
+   },
+   "Probability": 0.310489,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Bloody Fins": "True"
+   },
+   "Probability": 0.474262,
+   "Tail": {
+    "[D] Ammonia Poisoning": "False",
+    "[D] Bacterial Infection": "False",
+    "[D] Costiasis": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Moderate"
+   },
+   "Probability": 0.513847,
+   "Tail": {
+    "[W] Water Temperature": "(45 - 65] F",
+    "[W] Nitrite 3-Level": "None/Low"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "7.0"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[7.6 - 7.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine Level": "[4 - 5] ppm"
+   },
+   "Probability": 0.045847,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[7.4 - 7.6)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Decaying Food": "Present"
+   },
+   "Probability": 0.532452,
+   "Tail": {
+    "[W] pH Level >= 7.2": "True",
+    "[W] Ammonia 3-Level": "Moderate"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.0 - 6.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.4 - 8.6)"
+   }
+  },
+  {
+   "Head": {
+    "[Objects] Cleanliness": "Clean"
+   },
+   "Probability": 0.487273,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "Less than 6.0"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Color": "Discolored - greyish"
+   },
+   "Probability": 0.0494308,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Ammonia Level": "0 ppm"
+   },
+   "Probability": 0.382303,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Chloromine": "Present"
+   },
+   "Probability": 0.730986,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[W] Chlorine": "Present",
+    "[F] Fish Behavior": "Listless"
+   }
+  },
+  {
+   "Head": {
+    "[F] Skin": "Heavy slime"
+   },
+   "Probability": 0.558923,
+   "Tail": {
+    "[W] Nitrate": "Not Present",
+    "[D] Costiasis": "True",
+    "[W] Water Quality": "Good"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.8 - 9.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Ammonia 3-Level": "High"
+   },
+   "Probability": 0.954622,
+   "Tail": {
+    "[W] Ammonia Level": "[2 - 3] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Algae": "Present"
+   },
+   "Probability": 0.359467,
+   "Tail": {
+    "[W] Color": "Yellow",
+    "[W] Water Condition": "Alkaline"
+   }
+  },
+  {
+   "Head": {
+    "[W] Color": "Yellow"
+   },
+   "Probability": 0.19487,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Ammonia Burns": "True"
+   },
+   "Probability": 0.604269,
+   "Tail": {
+    "[W] Ammonia Level": "[4 - 5] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Odor": "Decaying"
+   },
+   "Probability": 0.71609,
+   "Tail": {
+    "[W] Fish waste": "Not Present",
+    "[W] Decaying Food": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[8.6 - 8.8)"
+   },
+   "Probability": 0.00181063,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Algae": "None"
+   },
+   "Probability": 0.411809,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[8.2 - 8.4)"
+   },
+   "Probability": 0.0145078,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "Less than 6.0"
+   }
+  },
+  {
+   "Head": {
+    "[D] Ammonia Poisoning": "True"
+   },
+   "Probability": 0.60028,
+   "Tail": {
+    "[W] pH Level >= 7.2": "True",
+    "[W] Ammonia 3-Level": "Moderate"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Clamped to Body"
+   },
+   "Probability": 0.418033,
+   "Tail": {
+    "[W] Ammonia Level": "[2 - 3] ppm",
+    "[D] Beta Finch Fin": "False"
+   }
+  },
+  {
+   "Head": {
+    "[Objects] Cleanliness": "Brown/Green film or coating"
+   },
+   "Probability": 0.417694,
+   "Tail": {
+    "[W] Algae": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] Color": "Yellow and Green"
+   },
+   "Probability": 0.112713,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Chloromine": "Present"
+   },
+   "Probability": 0.501889,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[W] Chlorine": "Present",
+    "[F] Fish Behavior": "Poor swimming ability"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.0 - 8.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.4 - 6.6)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fins": "Torn/frayed/eroded"
+   },
+   "Probability": 0.689398,
+   "Tail": {
+    "[W] Water Condition": "Alkaline",
+    "[D] Rot": "False",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[F] Appetite": "Limited/None"
+   },
+   "Probability": 0.720156,
+   "Tail": {
+    "[F] Stress Level": "Major",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.4 - 7.6)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Darting movements"
+   },
+   "Probability": 0.266254,
+   "Tail": {
+    "[W] Chlorine": "Not Present",
+    "[D] Discus Head Worms": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Fish waste": "Not Present"
+   },
+   "Probability": 0.446817,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Ammonia Burns": "False"
+   },
+   "Probability": 0.395731,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "(7.0 - 7.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.6 - 8.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Temperature": "(45 - 65] F"
+   },
+   "Probability": 0.192035,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[7.2 - 7.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[7.4 - 7.6)"
+   },
+   "Probability": 0.0929415,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Bloody Fins": "True"
+   },
+   "Probability": 0.336187,
+   "Tail": {
+    "[D] Ammonia Poisoning": "False",
+    "[D] Bacterial Infection": "True",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[F] Nitrite Poisoning": "False"
+   },
+   "Probability": 0.989711,
+   "Tail": {
+    "[W] Nitrite Level": "0 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.2 - 8.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Acid"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.8 - 9.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[8.8 - 9.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.8 - 7.0)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[7.4 - 7.6)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Decaying Food": "Present"
+   },
+   "Probability": 0.5802,
+   "Tail": {
+    "[W] pH Level >= 7.2": "False",
+    "[W] Ammonia 3-Level": "Moderate"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.4 - 8.6)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Spots": "White spots"
+   },
+   "Probability": 0.650904,
+   "Tail": {
+    "[D] Ich (White Spot)": "True",
+    "[D] Black Spot": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrite 3-Level": "Moderate"
+   },
+   "Probability": 0.913173,
+   "Tail": {
+    "[W] Nitrite Level": "[.5 - 1) ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Chlorine": "Not Present"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] Chlorine Level": "[4 - 5] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Blood Congestion in Body Parts": "True"
+   },
+   "Probability": 0.706753,
+   "Tail": {
+    "[D] Ammonia Poisoning": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Spots": "Black spots"
+   },
+   "Probability": 0.535585,
+   "Tail": {
+    "[D] Ammonia Poisoning": "False",
+    "[D] Ich (White Spot)": "False",
+    "[D] Black Spot": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrite Level": ">= 3 ppm"
+   },
+   "Probability": 0.104808,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Appetite": "Limited/None"
+   },
+   "Probability": 0.74227,
+   "Tail": {
+    "[F] Stress Level": "Moderate",
+    "[D] Costiasis": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Ammonia Poisoning": "True"
+   },
+   "Probability": 0.552076,
+   "Tail": {
+    "[W] pH Level >= 7.2": "True",
+    "[W] Ammonia 3-Level": "High"
+   }
+  },
+  {
+   "Head": {
+    "[F] Stress Level": "Moderate"
+   },
+   "Probability": 0.774311,
+   "Tail": {
+    "[W] Water Temperature": "(45 - 65] F",
+    "[W] Nitrite 3-Level": "Moderate"
+   }
+  },
+  {
+   "Head": {
+    "[F] Spots": "Red spots"
+   },
+   "Probability": 0.0476614,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Clamped to Body"
+   },
+   "Probability": 0.852713,
+   "Tail": {
+    "[W] Ammonia Level": "[2 - 3] ppm",
+    "[D] Beta Finch Fin": "True"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[6.6 - 6.8)"
+   },
+   "Probability": 0.0581883,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Bloody Fins": "True"
+   },
+   "Probability": 0.490211,
+   "Tail": {
+    "[D] Ammonia Poisoning": "True",
+    "[D] Bacterial Infection": "False",
+    "[D] Costiasis": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.8 - 9.0)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Scales": "Missing Scales"
+   },
+   "Probability": 0.112401,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Odor": "Decaying"
+   },
+   "Probability": 0.648055,
+   "Tail": {
+    "[W] Fish waste": "Present",
+    "[W] Decaying Food": "Not Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[6.0 - 6.2)"
+   }
+  },
+  {
+   "Head": {
+    "[D] Velvet": "False"
+   },
+   "Probability": 0.601445,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[8.4 - 8.6)"
+   },
+   "Probability": 0.0109222,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[D] Saprolegnia": "True"
+   },
+   "Probability": 0.3803,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrate": "Present"
+   },
+   "Probability": 0.480481,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level": "More than 9.0"
+   },
+   "Probability": 0.000561403,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Odor": "None"
+   },
+   "Probability": 0.28391,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fish Color": "Poor color"
+   },
+   "Probability": 0.262786,
+   "Tail": {
+    "[W] Nitrate": "Present",
+    "[W] Water Temperature": "> 72 F"
+   }
+  },
+  {
+   "Head": {
+    "[F] Organ Failure": "False"
+   },
+   "Probability": 0.437151,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Chloromine": "Not Present"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] Ammonia 3-Level": "None/Low",
+    "[W] Chlorine": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[F] Nitrite Poisoning": "True"
+   },
+   "Probability": 0.241628,
+   "Tail": {
+    "[W] Nitrite Level": "[.5 - 1) ppm"
+   }
+  },
+  {
+   "Head": {
+    "[D] Bacterial Infection": "True"
+   },
+   "Probability": 0.57488,
+   "Tail": {
+    "[W] Ammonia 3-Level": "High",
+    "[F] Blackened Fins": "False"
+   }
+  },
+  {
+   "Head": {
+    "[D] Ammonia Burns": "True"
+   },
+   "Probability": 0.0945084,
+   "Tail": {
+    "[W] Ammonia Level": "[.5 - 1] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[F] Breathing": "Labored"
+   },
+   "Probability": 0.34691,
+   "Tail": {
+    "[D] Velvet": "False",
+    "[D] Dactylogyrus": "True"
+   }
+  },
+  {
+   "Head": {
+    "[D] Ich (White Spot)": "True"
+   },
+   "Probability": 0.320679,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[D] Itching": "True"
+   },
+   "Probability": 0.337472,
+   "Tail": {
+    "[F] Parasites": "Present"
+   }
+  },
+  {
+   "Head": {
+    "[F] Parasites": "Present"
+   },
+   "Probability": 0.548703,
+   "Tail": {
+    "[F] Stress Level": "Major",
+    "[F] Fish Appearance": "Thin/weak",
+    "[W] Water Quality": "Poor"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Alkaline"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "Less than 6.0"
+   }
+  },
+  {
+   "Head": {
+    "[F] Blood Congestion in Body Parts": "False"
+   },
+   "Probability": 0.293247,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fish Color": "Discolored - yellowish"
+   },
+   "Probability": 0.237562,
+   "Tail": {
+    "[W] Water Condition": "Alkaline",
+    "[D] Velvet": "True"
+   }
+  },
+  {
+   "Head": {
+    "[F] Fish Behavior": "Darting movements"
+   },
+   "Probability": 0.17022,
+   "Tail": {
+    "[W] Chlorine": "Present",
+    "[D] Discus Head Worms": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.6 - 8.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[7.2 - 7.4)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.6 - 6.8)"
+   }
+  },
+  {
+   "Head": {
+    "[W] Ammonia 3-Level": "High"
+   },
+   "Probability": 0.975635,
+   "Tail": {
+    "[W] Ammonia Level": "[4 - 5] ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "[8.2 - 8.4)"
+   }
+  },
+  {
+   "Head": {
+    "[F] Nitrite Poisoning": "True"
+   },
+   "Probability": 0.95369,
+   "Tail": {
+    "[W] Nitrite Level": ">= 3 ppm"
+   }
+  },
+  {
+   "Head": {
+    "[W] Water Condition": "Neutral"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "Less than 6.0"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level": "[7.6 - 7.8)"
+   },
+   "Probability": 0.0581883,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] Ammonia Level": "[.5 - 1] ppm"
+   },
+   "Probability": 0.224327,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "7.0"
+   }
+  },
+  {
+   "Head": {
+    "[F] Breathing": "Normal"
+   },
+   "Probability": 0.25954,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[F] Fin Position": "Clamped to Body"
+   },
+   "Probability": 0.644292,
+   "Tail": {
+    "[W] Ammonia Level": "[.5 - 1] ppm",
+    "[D] Beta Finch Fin": "False"
+   }
+  },
+  {
+   "Head": {
+    "[W] Nitrite Level": "[1 - 2) ppm"
+   },
+   "Probability": 0.0997695,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "False"
+   },
+   "Probability": 1.0,
+   "Tail": {
+    "[W] pH Level": "(7.0 - 7.2)"
+   }
+  },
+  {
+   "Head": {
+    "[W] pH Level >= 7.2": "True"
+   },
+   "Probability": 0.0,
+   "Tail": {
+    "[W] pH Level": "[6.0 - 6.2)"
+   }
+  },
+  {
+   "Head": {
+    "[D] Black Spot": "False"
+   },
+   "Probability": 0.784949,
+   "Tail": {}
+  }
+ ]
+}

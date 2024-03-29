@@ -1,0 +1,349 @@
+{
+ "Name": "Illegal Fishing Evidence",
+ "Instantiation Nodes": {
+  "(B) Illegal fishing has occurred": [
+   "No",
+   "Yes"
+  ],
+  "(B) Fish supply is sufficient": [
+   "No",
+   "Yes"
+  ],
+  "(B) Boarding skills are obtainable": [
+   "No",
+   "Yes"
+  ],
+  "(B) Fishing livelihood is threatened": [
+   "No",
+   "Yes"
+  ],
+  "(X) Boarding skills": [
+   "No",
+   "Yes"
+  ],
+  "(B) Attitude towards piracy": [
+   "Positive",
+   "Negative"
+  ],
+  "(B) Survival is moral": [
+   "No",
+   "Yes"
+  ],
+  "(B) Revenge is moral": [
+   "No",
+   "Yes"
+  ]
+ },
+ "Support Nodes": [
+  {
+   "Head": {
+    "(B) Boarding skills are obtainable": "No"
+   },
+   "Probability": 0.35,
+   "Tail": {
+    "(B) Illegal fishing has occurred": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   },
+   "Probability": 0.4,
+   "Tail": {
+    "(B) Fish supply is sufficient": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Boarding skills are obtainable": "Yes"
+   },
+   "Probability": 0.1,
+   "Tail": {
+    "(B) Illegal fishing has occurred": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Survival is moral": "Yes"
+   },
+   "Probability": 0.3,
+   "Tail": {
+    "(B) Fishing livelihood is threatened": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Revenge is moral": "Yes"
+   },
+   "Probability": 0.3,
+   "Tail": {
+    "(B) Fishing livelihood is threatened": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Survival is moral": "Yes"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Revenge is moral": "Yes"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Illegal fishing has occurred": "No"
+   },
+   "Probability": 0.0,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Positive"
+   },
+   "Probability": 0.25,
+   "Tail": {
+    "(B) Survival is moral": "No",
+    "(B) Revenge is moral": "No"
+   }
+  },
+  {
+   "Head": {
+    "(X) Boarding skills": "No"
+   },
+   "Probability": 0.25,
+   "Tail": {
+    "(B) Boarding skills are obtainable": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(X) Boarding skills": "Yes"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "(B) Boarding skills are obtainable": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Positive"
+   },
+   "Probability": 0.8,
+   "Tail": {
+    "(B) Survival is moral": "Yes",
+    "(B) Revenge is moral": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Positive"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "(B) Survival is moral": "No",
+    "(B) Revenge is moral": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fish supply is sufficient": "Yes"
+   },
+   "Probability": 0.25,
+   "Tail": {
+    "(B) Illegal fishing has occurred": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(X) Boarding skills": "Yes"
+   },
+   "Probability": 0.05,
+   "Tail": {
+    "(B) Boarding skills are obtainable": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Negative"
+   },
+   "Probability": 0.3,
+   "Tail": {
+    "(B) Survival is moral": "Yes",
+    "(B) Revenge is moral": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Negative"
+   },
+   "Probability": 0.2,
+   "Tail": {
+    "(B) Survival is moral": "Yes",
+    "(B) Revenge is moral": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fish supply is sufficient": "Yes"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "(B) Illegal fishing has occurred": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Negative"
+   },
+   "Probability": 0.4,
+   "Tail": {
+    "(B) Survival is moral": "No",
+    "(B) Revenge is moral": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Boarding skills are obtainable": "No"
+   },
+   "Probability": 0.9,
+   "Tail": {
+    "(B) Illegal fishing has occurred": "No"
+   }
+  },
+  {
+   "Head": {
+    "(X) Boarding skills": "No"
+   },
+   "Probability": 0.95,
+   "Tail": {
+    "(B) Boarding skills are obtainable": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fish supply is sufficient": "No"
+   },
+   "Probability": 0.25,
+   "Tail": {
+    "(B) Illegal fishing has occurred": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   },
+   "Probability": 0.8,
+   "Tail": {
+    "(B) Fish supply is sufficient": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Survival is moral": "No"
+   },
+   "Probability": 0.25,
+   "Tail": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Revenge is moral": "No"
+   },
+   "Probability": 0.7,
+   "Tail": {
+    "(B) Fishing livelihood is threatened": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fish supply is sufficient": "No"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "(B) Illegal fishing has occurred": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Positive"
+   },
+   "Probability": 0.7,
+   "Tail": {
+    "(B) Survival is moral": "Yes",
+    "(B) Revenge is moral": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "No"
+   },
+   "Probability": 0.2,
+   "Tail": {
+    "(B) Fish supply is sufficient": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Revenge is moral": "No"
+   },
+   "Probability": 0.25,
+   "Tail": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Survival is moral": "No"
+   },
+   "Probability": 0.7,
+   "Tail": {
+    "(B) Fishing livelihood is threatened": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Boarding skills are obtainable": "Yes"
+   },
+   "Probability": 0.65,
+   "Tail": {
+    "(B) Illegal fishing has occurred": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "No"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "(B) Fish supply is sufficient": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Illegal fishing has occurred": "Yes"
+   },
+   "Probability": 1.0,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Attitude towards piracy": "Negative"
+   },
+   "Probability": 0.75,
+   "Tail": {
+    "(B) Survival is moral": "No",
+    "(B) Revenge is moral": "No"
+   }
+  }
+ ]
+}

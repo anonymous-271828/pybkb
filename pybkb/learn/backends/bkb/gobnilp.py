@@ -109,8 +109,10 @@ class BKBGobnilpBackend:
         report.initialize_bkf_metrics(data.shape[0])
         # Build feature states index map
         feature_states_index_map = {fs: idx for idx, fs in enumerate(feature_states)}
+        self.feature_states_index_map = feature_states_index_map
         # Build more effective data structures
         data_eff = self.format_data_for_probs(data, verbose=verbose)
+        self.data_eff = data_eff
         # Reset store unless one is passed
         if store is None:
             self.store = build_probability_store()

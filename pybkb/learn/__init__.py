@@ -4,7 +4,6 @@ from operator import itemgetter
 
 from pybkb.learn.backends.bkb.gobnilp import BKBGobnilpBackend
 from pybkb.learn.backends.distributed.bkb.gobnilp import BKBGobnilpDistributedBackend
-from pybkb.learn.backends.bn.gobnilp import BNGobnilpBackend
 from pybkb.fusion import fuse
 
 

@@ -1,0 +1,1424 @@
+COMPONENTS: 57
+
+12 [W] pH Level
+	STATES: 18
+		13 Less than 6.0
+		11 [6.0 - 6.2)
+		11 [6.2 - 6.4)
+		11 [6.4 - 6.6)
+		11 [6.6 - 6.8)
+		11 [6.8 - 7.0)
+		3 7.0
+		11 (7.0 - 7.2)
+		11 [7.2 - 7.4)
+		11 [7.4 - 7.6)
+		11 [7.6 - 7.8)
+		11 [7.8 - 8.0)
+		11 [8.0 - 8.2)
+		11 [8.2 - 8.4)
+		11 [8.4 - 8.6)
+		11 [8.6 - 8.8)
+		11 [8.8 - 9.0)
+		13 More than 9.0
+11 [W] Clarity
+	STATES: 3
+		5 Clear
+		5 Murky
+		7 Powdery
+9 [W] Color
+	STATES: 4
+		5 Clear
+		6 Yellow
+		5 Green
+		16 Yellow and Green
+8 [W] Odor
+	STATES: 2
+		4 None
+		8 Decaying
+18 [W] Chlorine Level
+	STATES: 5
+		5 0 ppm
+		15 [.25 - .50] ppm
+		13 [.75 - 1] ppm
+		11 [2 - 3] ppm
+		11 [4 - 5] ppm
+17 [W] Ammonia Level
+	STATES: 5
+		5 0 ppm
+		12 [.5 - 1] ppm
+		11 [2 - 3] ppm
+		11 [4 - 5] ppm
+		11 [6 - 7] ppm
+21 [Objects] Cleanliness
+	STATES: 2
+		5 Clean
+		27 Brown/Green film or coating
+9 [W] Algae
+	STATES: 2
+		4 None
+		7 Present
+16 [F] Fin Position
+	STATES: 2
+		6 Spread
+		15 Clamped to Body
+13 [F] Breathing
+	STATES: 3
+		6 Normal
+		5 Rapid
+		7 Labored
+17 [W] Nitrite Level
+	STATES: 6
+		5 0 ppm
+		14 [.25 - .5) ppm
+		12 [.5 - 1) ppm
+		11 [1 - 2) ppm
+		11 [2 - 3) ppm
+		8 >= 3 ppm
+12 [F] Appetite
+	STATES: 2
+		6 Normal
+		12 Limited/None
+16 [F] Stress Level
+	STATES: 4
+		4 None
+		4 Mild
+		8 Moderate
+		5 Major
+19 [W] pH Level >= 7.2
+	STATES: 2
+		5 False
+		4 True
+19 [W] Ammonia 3-Level
+	STATES: 3
+		8 None/Low
+		8 Moderate
+		4 High
+21 [D] Ammonia Poisoning
+	STATES: 2
+		5 False
+		4 True
+17 [F] Organ Failure
+	STATES: 2
+		4 True
+		5 False
+15 [F] Bloody Fins
+	STATES: 2
+		5 False
+		4 True
+34 [F] Blood Congestion in Body Parts
+	STATES: 2
+		5 False
+		4 True
+17 [D] Ammonia Burns
+	STATES: 2
+		5 False
+		4 True
+18 [F] Blackened Fins
+	STATES: 2
+		5 False
+		4 True
+24 [F] Blackened Body Parts
+	STATES: 2
+		5 False
+		4 True
+23 [D] Bacterial Infection
+	STATES: 2
+		4 True
+		5 False
+19 [W] Water Condition
+	STATES: 3
+		4 Acid
+		8 Alkaline
+		7 Neutral
+14 [W] Chloromine
+	STATES: 2
+		7 Present
+		11 Not Present
+12 [W] Chlorine
+	STATES: 2
+		7 Present
+		11 Not Present
+21 [F] Nitrite Poisoning
+	STATES: 2
+		4 True
+		5 False
+11 [W] Nitrate
+	STATES: 2
+		7 Present
+		11 Not Present
+10 [F] Scales
+	STATES: 3
+		6 Normal
+		10 Protruding
+		14 Missing Scales
+8 [F] Fins
+	STATES: 2
+		6 Normal
+		18 Torn/frayed/eroded
+15 [F] Body Growth
+	STATES: 6
+		4 None
+		7 On head
+		7 On body
+		16 On head and body
+		7 On fins
+		16 On fins and body
+8 [F] Skin
+	STATES: 3
+		6 Normal
+		11 Heavy slime
+		11 Moldy slime
+14 [W] Fish waste
+	STATES: 2
+		7 Present
+		11 Not Present
+14 [F] Fish Color
+	STATES: 4
+		6 Normal
+		22 Discolored - yellowish
+		20 Discolored - greyish
+		10 Poor color
+19 [F] Fish Appearance
+	STATES: 3
+		7 Healthy
+		15 Swollen/bloated
+		9 Thin/weak
+17 [F] Fish Behavior
+	STATES: 5
+		6 Normal
+		8 Listless
+		17 Darting movements
+		31 Scratching against tank objects
+		21 Poor swimming ability
+17 [W] Decaying Food
+	STATES: 2
+		7 Present
+		11 Not Present
+11 [D] Itching
+	STATES: 2
+		4 True
+		5 False
+7 [D] Rot
+	STATES: 2
+		4 True
+		5 False
+15 [D] Saprolegnia
+	STATES: 2
+		4 True
+		5 False
+15 [D] Gill Flukes
+	STATES: 2
+		4 True
+		5 False
+16 [D] Gyrodactylus
+	STATES: 2
+		4 True
+		5 False
+21 [W] Water Temperature
+	STATES: 4
+		11 (32 - 45] F
+		11 (45 - 65] F
+		11 (65 - 72] F
+		6 > 72 F
+9 [F] Spots
+	STATES: 4
+		4 None
+		11 White spots
+		11 Black spots
+		9 Red spots
+10 [D] Dropsy
+	STATES: 2
+		4 True
+		5 False
+20 [D] Ich (White Spot)
+	STATES: 2
+		4 True
+		5 False
+10 [D] Velvet
+	STATES: 2
+		4 True
+		5 False
+13 [D] Costiasis
+	STATES: 2
+		4 True
+		5 False
+10 [D] Fungus
+	STATES: 2
+		4 True
+		5 False
+17 [W] Water Quality
+	STATES: 2
+		4 Good
+		4 Poor
+18 [D] Beta Finch Fin
+	STATES: 2
+		4 True
+		5 False
+14 [D] Black Spot
+	STATES: 2
+		4 True
+		5 False
+14 [D] Columnaris
+	STATES: 2
+		4 True
+		5 False
+16 [D] Dactylogyrus
+	STATES: 2
+		4 True
+		5 False
+21 [D] Discus Head Worms
+	STATES: 2
+		4 True
+		5 False
+19 [W] Nitrite 3-Level
+	STATES: 3
+		8 None/Low
+		8 Moderate
+		4 High
+13 [F] Parasites
+	STATES: 2
+		7 Present
+		11 Not Present
+12 [W] pH Level
+	13 Less than 6.0
+		SUPPORTS: 1
+			0.00135733 TAIL: 0
+	11 [6.0 - 6.2)
+		SUPPORTS: 1
+			0.0023149 TAIL: 0
+	11 [6.2 - 6.4)
+		SUPPORTS: 1
+			0.0109222 TAIL: 0
+	11 [6.4 - 6.6)
+		SUPPORTS: 1
+			0.0286254 TAIL: 0
+	11 [6.6 - 6.8)
+		SUPPORTS: 1
+			0.0581883 TAIL: 0
+	11 [6.8 - 7.0)
+		SUPPORTS: 1
+			0.0929415 TAIL: 0
+	3 7.0
+		SUPPORTS: 1
+			0.13344 TAIL: 0
+	11 (7.0 - 7.2)
+		SUPPORTS: 1
+			0.297562 TAIL: 0
+	11 [7.2 - 7.4)
+		SUPPORTS: 1
+			0.13344 TAIL: 0
+	11 [7.4 - 7.6)
+		SUPPORTS: 1
+			0.0929415 TAIL: 0
+	11 [7.6 - 7.8)
+		SUPPORTS: 1
+			0.0581883 TAIL: 0
+	11 [7.8 - 8.0)
+		SUPPORTS: 1
+			0.0375789 TAIL: 0
+	11 [8.0 - 8.2)
+		SUPPORTS: 1
+			0.0234614 TAIL: 0
+	11 [8.2 - 8.4)
+		SUPPORTS: 1
+			0.0145078 TAIL: 0
+	11 [8.4 - 8.6)
+		SUPPORTS: 1
+			0.0109222 TAIL: 0
+	11 [8.6 - 8.8)
+		SUPPORTS: 1
+			0.00181063 TAIL: 0
+	11 [8.8 - 9.0)
+		SUPPORTS: 1
+			0.00123584 TAIL: 0
+	13 More than 9.0
+		SUPPORTS: 1
+			0.000561403 TAIL: 0
+11 [W] Clarity
+	5 Clear
+		SUPPORTS: 1
+			0.380966 TAIL: 0
+	5 Murky
+		SUPPORTS: 3
+			0.436744 TAIL: 2
+				14 [W] Fish waste 7 Present
+				17 [W] Decaying Food 11 Not Present
+			0.374445 TAIL: 2
+				17 [W] Decaying Food 7 Present
+				14 [W] Fish waste 11 Not Present
+			0.354662 TAIL: 2
+				14 [W] Fish waste 7 Present
+				17 [W] Decaying Food 7 Present
+	7 Powdery
+		SUPPORTS: 1
+			0.18229 TAIL: 0
+9 [W] Color
+	5 Clear
+		SUPPORTS: 1
+			0.587026 TAIL: 0
+	6 Yellow
+		SUPPORTS: 1
+			0.19487 TAIL: 0
+	5 Green
+		SUPPORTS: 1
+			0.105391 TAIL: 0
+	16 Yellow and Green
+		SUPPORTS: 1
+			0.112713 TAIL: 0
+8 [W] Odor
+	4 None
+		SUPPORTS: 1
+			0.28391 TAIL: 0
+	8 Decaying
+		SUPPORTS: 3
+			0.71609 TAIL: 2
+				17 [W] Decaying Food 7 Present
+				14 [W] Fish waste 11 Not Present
+			0.648055 TAIL: 2
+				17 [W] Decaying Food 11 Not Present
+				14 [W] Fish waste 7 Present
+			0.553321 TAIL: 2
+				17 [W] Decaying Food 7 Present
+				14 [W] Fish waste 7 Present
+18 [W] Chlorine Level
+	5 0 ppm
+		SUPPORTS: 1
+			0.452504 TAIL: 0
+	15 [.25 - .50] ppm
+		SUPPORTS: 1
+			0.255953 TAIL: 0
+	13 [.75 - 1] ppm
+		SUPPORTS: 1
+			0.179381 TAIL: 0
+	11 [2 - 3] ppm
+		SUPPORTS: 1
+			0.066314 TAIL: 0
+	11 [4 - 5] ppm
+		SUPPORTS: 1
+			0.045847 TAIL: 0
+17 [W] Ammonia Level
+	5 0 ppm
+		SUPPORTS: 1
+			0.382303 TAIL: 0
+	12 [.5 - 1] ppm
+		SUPPORTS: 1
+			0.224327 TAIL: 0
+	11 [2 - 3] ppm
+		SUPPORTS: 1
+			0.159183 TAIL: 0
+	11 [4 - 5] ppm
+		SUPPORTS: 1
+			0.104912 TAIL: 0
+	11 [6 - 7] ppm
+		SUPPORTS: 1
+			0.129274 TAIL: 0
+21 [Objects] Cleanliness
+	5 Clean
+		SUPPORTS: 1
+			0.487273 TAIL: 0
+	27 Brown/Green film or coating
+		SUPPORTS: 1
+			0.417694 TAIL: 1
+				9 [W] Algae 7 Present
+9 [W] Algae
+	4 None
+		SUPPORTS: 1
+			0.411809 TAIL: 0
+	7 Present
+		SUPPORTS: 6
+			0.588191 TAIL: 2
+				9 [W] Color 5 Green
+				19 [W] Water Condition 8 Alkaline
+			0.396806 TAIL: 2
+				9 [W] Color 5 Green
+				19 [W] Water Condition 4 Acid
+			0.282732 TAIL: 2
+				9 [W] Color 5 Green
+				19 [W] Water Condition 7 Neutral
+			0.306112 TAIL: 2
+				19 [W] Water Condition 8 Alkaline
+				9 [W] Color 5 Clear
+			0.359467 TAIL: 2
+				19 [W] Water Condition 8 Alkaline
+				9 [W] Color 6 Yellow
+			0.466653 TAIL: 2
+				19 [W] Water Condition 8 Alkaline
+				9 [W] Color 16 Yellow and Green
+16 [F] Fin Position
+	6 Spread
+		SUPPORTS: 1
+			0.900542 TAIL: 1
+				17 [W] Ammonia Level 5 0 ppm
+	15 Clamped to Body
+		SUPPORTS: 8
+			0.645967 TAIL: 2
+				17 [W] Ammonia Level 12 [.5 - 1] ppm
+				18 [D] Beta Finch Fin 4 True
+			0.852713 TAIL: 2
+				17 [W] Ammonia Level 11 [2 - 3] ppm
+				18 [D] Beta Finch Fin 4 True
+			0.984666 TAIL: 2
+				17 [W] Ammonia Level 11 [4 - 5] ppm
+				18 [D] Beta Finch Fin 4 True
+			0.981612 TAIL: 2
+				17 [W] Ammonia Level 11 [6 - 7] ppm
+				18 [D] Beta Finch Fin 4 True
+			0.644292 TAIL: 2
+				17 [W] Ammonia Level 12 [.5 - 1] ppm
+				18 [D] Beta Finch Fin 5 False
+			0.418033 TAIL: 2
+				17 [W] Ammonia Level 11 [2 - 3] ppm
+				18 [D] Beta Finch Fin 5 False
+			0.723746 TAIL: 2
+				17 [W] Ammonia Level 11 [4 - 5] ppm
+				18 [D] Beta Finch Fin 5 False
+			0.930777 TAIL: 2
+				17 [W] Ammonia Level 11 [6 - 7] ppm
+				18 [D] Beta Finch Fin 5 False
+13 [F] Breathing
+	6 Normal
+		SUPPORTS: 1
+			0.25954 TAIL: 0
+	5 Rapid
+		SUPPORTS: 3
+			0.39355 TAIL: 1
+				21 [D] Ammonia Poisoning 4 True
+			0.469875 TAIL: 3
+				21 [D] Ammonia Poisoning 5 False
+				21 [F] Nitrite Poisoning 4 True
+				16 [D] Dactylogyrus 5 False
+			0.311869 TAIL: 3
+				21 [D] Ammonia Poisoning 5 False
+				21 [F] Nitrite Poisoning 5 False
+				12 [W] Chlorine 7 Present
+	7 Labored
+		SUPPORTS: 2
+			0.34691 TAIL: 2
+				16 [D] Dactylogyrus 4 True
+				10 [D] Velvet 5 False
+			0.157536 TAIL: 2
+				10 [D] Velvet 4 True
+				16 [D] Dactylogyrus 5 False
+17 [W] Nitrite Level
+	5 0 ppm
+		SUPPORTS: 1
+			0.297743 TAIL: 0
+	14 [.25 - .5) ppm
+		SUPPORTS: 1
+			0.213056 TAIL: 0
+	12 [.5 - 1) ppm
+		SUPPORTS: 1
+			0.211389 TAIL: 0
+	11 [1 - 2) ppm
+		SUPPORTS: 1
+			0.0997695 TAIL: 0
+	11 [2 - 3) ppm
+		SUPPORTS: 1
+			0.0732347 TAIL: 0
+	8 >= 3 ppm
+		SUPPORTS: 1
+			0.104808 TAIL: 0
+12 [F] Appetite
+	6 Normal
+		SUPPORTS: 1
+			0.889037 TAIL: 2
+				21 [W] Water Temperature 11 (65 - 72] F
+				16 [F] Stress Level 4 None
+	12 Limited/None
+		SUPPORTS: 6
+			0.957019 TAIL: 2
+				16 [F] Stress Level 5 Major
+				13 [D] Costiasis 4 True
+			0.74227 TAIL: 2
+				16 [F] Stress Level 8 Moderate
+				13 [D] Costiasis 4 True
+			0.65782 TAIL: 2
+				16 [F] Stress Level 4 Mild
+				13 [D] Costiasis 4 True
+			0.720156 TAIL: 2
+				16 [F] Stress Level 5 Major
+				13 [D] Costiasis 5 False
+			0.662959 TAIL: 2
+				16 [F] Stress Level 8 Moderate
+				13 [D] Costiasis 5 False
+			0.540736 TAIL: 2
+				16 [F] Stress Level 4 Mild
+				13 [D] Costiasis 5 False
+16 [F] Stress Level
+	4 None
+		SUPPORTS: 1
+			0.225689 TAIL: 0
+	4 Mild
+		SUPPORTS: 3
+			0.62052 TAIL: 2
+				21 [W] Water Temperature 11 (32 - 45] F
+				19 [W] Nitrite 3-Level 8 Moderate
+			0.633951 TAIL: 2
+				21 [W] Water Temperature 11 (32 - 45] F
+				19 [W] Nitrite 3-Level 8 None/Low
+			0.675196 TAIL: 2
+				21 [W] Water Temperature 11 (32 - 45] F
+				19 [W] Nitrite 3-Level 4 High
+	8 Moderate
+		SUPPORTS: 4
+			0.513847 TAIL: 2
+				21 [W] Water Temperature 11 (45 - 65] F
+				19 [W] Nitrite 3-Level 8 None/Low
+			0.774311 TAIL: 2
+				21 [W] Water Temperature 11 (45 - 65] F
+				19 [W] Nitrite 3-Level 8 Moderate
+			0.749925 TAIL: 3
+				21 [W] Water Temperature 11 (45 - 65] F
+				19 [W] Nitrite 3-Level 4 High
+				21 [Objects] Cleanliness 27 Brown/Green film or coating
+			0.667235 TAIL: 3
+				21 [W] Water Temperature 11 (45 - 65] F
+				19 [W] Nitrite 3-Level 4 High
+				21 [Objects] Cleanliness 5 Clean
+	5 Major
+		SUPPORTS: 3
+			0.402524 TAIL: 3
+				21 [W] Water Temperature 6 > 72 F
+				19 [W] Ammonia 3-Level 4 High
+				19 [W] Nitrite 3-Level 8 None/Low
+			0.685259 TAIL: 3
+				21 [W] Water Temperature 6 > 72 F
+				19 [W] Nitrite 3-Level 8 Moderate
+				19 [W] Ammonia 3-Level 4 High
+			0.559321 TAIL: 3
+				21 [W] Water Temperature 6 > 72 F
+				19 [W] Nitrite 3-Level 4 High
+				19 [W] Ammonia 3-Level 4 High
+19 [W] pH Level >= 7.2
+	5 False
+		SUPPORTS: 18
+			1 TAIL: 1
+				12 [W] pH Level 13 Less than 6.0
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.0 - 6.2)
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.2 - 6.4)
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.4 - 6.6)
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.6 - 6.8)
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.8 - 7.0)
+			1 TAIL: 1
+				12 [W] pH Level 3 7.0
+			1 TAIL: 1
+				12 [W] pH Level 11 (7.0 - 7.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.2 - 7.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.4 - 7.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.6 - 7.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.8 - 8.0)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.0 - 8.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.2 - 8.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.4 - 8.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.6 - 8.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.8 - 9.0)
+			0 TAIL: 1
+				12 [W] pH Level 13 More than 9.0
+	4 True
+		SUPPORTS: 18
+			1 TAIL: 1
+				12 [W] pH Level 11 [7.2 - 7.4)
+			1 TAIL: 1
+				12 [W] pH Level 11 [7.4 - 7.6)
+			1 TAIL: 1
+				12 [W] pH Level 13 More than 9.0
+			1 TAIL: 1
+				12 [W] pH Level 11 [7.6 - 7.8)
+			1 TAIL: 1
+				12 [W] pH Level 11 [7.8 - 8.0)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.0 - 8.2)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.2 - 8.4)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.4 - 8.6)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.6 - 8.8)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.8 - 9.0)
+			0 TAIL: 1
+				12 [W] pH Level 13 Less than 6.0
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.0 - 6.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.2 - 6.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.4 - 6.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.6 - 6.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.8 - 7.0)
+			0 TAIL: 1
+				12 [W] pH Level 3 7.0
+			0 TAIL: 1
+				12 [W] pH Level 11 (7.0 - 7.2)
+19 [W] Ammonia 3-Level
+	8 None/Low
+		SUPPORTS: 1
+			1 TAIL: 1
+				17 [W] Ammonia Level 5 0 ppm
+	8 Moderate
+		SUPPORTS: 2
+			0.995395 TAIL: 1
+				17 [W] Ammonia Level 12 [.5 - 1] ppm
+			0 TAIL: 1
+				17 [W] Ammonia Level 5 0 ppm
+	4 High
+		SUPPORTS: 4
+			0.954622 TAIL: 1
+				17 [W] Ammonia Level 11 [2 - 3] ppm
+			0.975635 TAIL: 1
+				17 [W] Ammonia Level 11 [4 - 5] ppm
+			0.932823 TAIL: 1
+				17 [W] Ammonia Level 11 [6 - 7] ppm
+			0 TAIL: 1
+				17 [W] Ammonia Level 5 0 ppm
+21 [D] Ammonia Poisoning
+	5 False
+		SUPPORTS: 1
+			0.39972 TAIL: 0
+	4 True
+		SUPPORTS: 2
+			0.60028 TAIL: 2
+				19 [W] pH Level >= 7.2 4 True
+				19 [W] Ammonia 3-Level 8 Moderate
+			0.552076 TAIL: 2
+				19 [W] pH Level >= 7.2 4 True
+				19 [W] Ammonia 3-Level 4 High
+17 [F] Organ Failure
+	4 True
+		SUPPORTS: 1
+			0.562849 TAIL: 1
+				21 [D] Ammonia Poisoning 4 True
+	5 False
+		SUPPORTS: 1
+			0.437151 TAIL: 0
+15 [F] Bloody Fins
+	5 False
+		SUPPORTS: 1
+			0.348748 TAIL: 0
+	4 True
+		SUPPORTS: 5
+			0.651252 TAIL: 3
+				21 [D] Ammonia Poisoning 4 True
+				13 [D] Costiasis 5 False
+				23 [D] Bacterial Infection 4 True
+			0.638005 TAIL: 3
+				21 [D] Ammonia Poisoning 5 False
+				13 [D] Costiasis 4 True
+				23 [D] Bacterial Infection 4 True
+			0.490211 TAIL: 3
+				21 [D] Ammonia Poisoning 4 True
+				13 [D] Costiasis 5 False
+				23 [D] Bacterial Infection 5 False
+			0.474262 TAIL: 3
+				21 [D] Ammonia Poisoning 5 False
+				13 [D] Costiasis 4 True
+				23 [D] Bacterial Infection 5 False
+			0.336187 TAIL: 3
+				23 [D] Bacterial Infection 4 True
+				21 [D] Ammonia Poisoning 5 False
+				13 [D] Costiasis 5 False
+34 [F] Blood Congestion in Body Parts
+	5 False
+		SUPPORTS: 1
+			0.293247 TAIL: 0
+	4 True
+		SUPPORTS: 1
+			0.706753 TAIL: 1
+				21 [D] Ammonia Poisoning 4 True
+17 [D] Ammonia Burns
+	5 False
+		SUPPORTS: 1
+			0.395731 TAIL: 0
+	4 True
+		SUPPORTS: 4
+			0.0945084 TAIL: 1
+				17 [W] Ammonia Level 12 [.5 - 1] ppm
+			0.46358 TAIL: 1
+				17 [W] Ammonia Level 11 [2 - 3] ppm
+			0.604269 TAIL: 1
+				17 [W] Ammonia Level 11 [4 - 5] ppm
+			0.522988 TAIL: 1
+				17 [W] Ammonia Level 11 [6 - 7] ppm
+18 [F] Blackened Fins
+	5 False
+		SUPPORTS: 1
+			0.461257 TAIL: 0
+	4 True
+		SUPPORTS: 1
+			0.538743 TAIL: 1
+				17 [D] Ammonia Burns 4 True
+24 [F] Blackened Body Parts
+	5 False
+		SUPPORTS: 1
+			0.436001 TAIL: 0
+	4 True
+		SUPPORTS: 1
+			0.563999 TAIL: 1
+				17 [D] Ammonia Burns 4 True
+23 [D] Bacterial Infection
+	4 True
+		SUPPORTS: 4
+			0.49908 TAIL: 2
+				18 [F] Blackened Fins 4 True
+				19 [W] Ammonia 3-Level 8 None/Low
+			0.394797 TAIL: 2
+				19 [W] Ammonia 3-Level 8 Moderate
+				18 [F] Blackened Fins 4 True
+			0.68175 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				18 [F] Blackened Fins 4 True
+			0.57488 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				18 [F] Blackened Fins 5 False
+	5 False
+		SUPPORTS: 1
+			0.31825 TAIL: 0
+19 [W] Water Condition
+	4 Acid
+		SUPPORTS: 18
+			1 TAIL: 1
+				12 [W] pH Level 13 Less than 6.0
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.0 - 6.2)
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.2 - 6.4)
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.4 - 6.6)
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.6 - 6.8)
+			1 TAIL: 1
+				12 [W] pH Level 11 [6.8 - 7.0)
+			0 TAIL: 1
+				12 [W] pH Level 3 7.0
+			0 TAIL: 1
+				12 [W] pH Level 11 (7.0 - 7.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.2 - 7.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.4 - 7.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.6 - 7.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.8 - 8.0)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.0 - 8.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.2 - 8.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.4 - 8.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.6 - 8.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.8 - 9.0)
+			0 TAIL: 1
+				12 [W] pH Level 13 More than 9.0
+	8 Alkaline
+		SUPPORTS: 18
+			0 TAIL: 1
+				12 [W] pH Level 13 Less than 6.0
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.0 - 6.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.2 - 6.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.4 - 6.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.6 - 6.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.8 - 7.0)
+			0 TAIL: 1
+				12 [W] pH Level 3 7.0
+			1 TAIL: 1
+				12 [W] pH Level 11 (7.0 - 7.2)
+			1 TAIL: 1
+				12 [W] pH Level 11 [7.2 - 7.4)
+			1 TAIL: 1
+				12 [W] pH Level 11 [7.4 - 7.6)
+			1 TAIL: 1
+				12 [W] pH Level 11 [7.6 - 7.8)
+			1 TAIL: 1
+				12 [W] pH Level 11 [7.8 - 8.0)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.0 - 8.2)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.2 - 8.4)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.4 - 8.6)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.6 - 8.8)
+			1 TAIL: 1
+				12 [W] pH Level 11 [8.8 - 9.0)
+			1 TAIL: 1
+				12 [W] pH Level 13 More than 9.0
+	7 Neutral
+		SUPPORTS: 18
+			0 TAIL: 1
+				12 [W] pH Level 13 Less than 6.0
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.0 - 6.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.2 - 6.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.4 - 6.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.6 - 6.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [6.8 - 7.0)
+			1 TAIL: 1
+				12 [W] pH Level 3 7.0
+			0 TAIL: 1
+				12 [W] pH Level 11 (7.0 - 7.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.2 - 7.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.4 - 7.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.6 - 7.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [7.8 - 8.0)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.0 - 8.2)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.2 - 8.4)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.4 - 8.6)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.6 - 8.8)
+			0 TAIL: 1
+				12 [W] pH Level 11 [8.8 - 9.0)
+			0 TAIL: 1
+				12 [W] pH Level 13 More than 9.0
+14 [W] Chloromine
+	7 Present
+		SUPPORTS: 4
+			0.784167 TAIL: 3
+				19 [W] Ammonia 3-Level 8 Moderate
+				12 [W] Chlorine 7 Present
+				17 [F] Fish Behavior 8 Listless
+			0.730986 TAIL: 3
+				19 [W] Ammonia 3-Level 4 High
+				12 [W] Chlorine 7 Present
+				17 [F] Fish Behavior 8 Listless
+			0.649734 TAIL: 3
+				19 [W] Ammonia 3-Level 8 Moderate
+				12 [W] Chlorine 7 Present
+				17 [F] Fish Behavior 21 Poor swimming ability
+			0.501889 TAIL: 3
+				19 [W] Ammonia 3-Level 4 High
+				12 [W] Chlorine 7 Present
+				17 [F] Fish Behavior 21 Poor swimming ability
+	11 Not Present
+		SUPPORTS: 4
+			1 TAIL: 2
+				12 [W] Chlorine 11 Not Present
+				19 [W] Ammonia 3-Level 8 None/Low
+			1 TAIL: 2
+				19 [W] Ammonia 3-Level 8 Moderate
+				12 [W] Chlorine 11 Not Present
+			1 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				12 [W] Chlorine 11 Not Present
+			1 TAIL: 2
+				19 [W] Ammonia 3-Level 8 None/Low
+				12 [W] Chlorine 7 Present
+12 [W] Chlorine
+	7 Present
+		SUPPORTS: 5
+			1 TAIL: 1
+				18 [W] Chlorine Level 15 [.25 - .50] ppm
+			1 TAIL: 1
+				18 [W] Chlorine Level 13 [.75 - 1] ppm
+			1 TAIL: 1
+				18 [W] Chlorine Level 11 [2 - 3] ppm
+			1 TAIL: 1
+				18 [W] Chlorine Level 11 [4 - 5] ppm
+			0 TAIL: 1
+				18 [W] Chlorine Level 5 0 ppm
+	11 Not Present
+		SUPPORTS: 5
+			1 TAIL: 1
+				18 [W] Chlorine Level 5 0 ppm
+			0 TAIL: 1
+				18 [W] Chlorine Level 15 [.25 - .50] ppm
+			0 TAIL: 1
+				18 [W] Chlorine Level 13 [.75 - 1] ppm
+			0 TAIL: 1
+				18 [W] Chlorine Level 11 [2 - 3] ppm
+			0 TAIL: 1
+				18 [W] Chlorine Level 11 [4 - 5] ppm
+21 [F] Nitrite Poisoning
+	4 True
+		SUPPORTS: 5
+			0.95369 TAIL: 1
+				17 [W] Nitrite Level 8 >= 3 ppm
+			0.140245 TAIL: 1
+				17 [W] Nitrite Level 14 [.25 - .5) ppm
+			0.241628 TAIL: 1
+				17 [W] Nitrite Level 12 [.5 - 1) ppm
+			0.363385 TAIL: 1
+				17 [W] Nitrite Level 11 [1 - 2) ppm
+			0.736872 TAIL: 1
+				17 [W] Nitrite Level 11 [2 - 3) ppm
+	5 False
+		SUPPORTS: 1
+			0.989711 TAIL: 1
+				17 [W] Nitrite Level 5 0 ppm
+11 [W] Nitrate
+	7 Present
+		SUPPORTS: 1
+			0.480481 TAIL: 0
+	11 Not Present
+		SUPPORTS: 1
+			0.519519 TAIL: 0
+10 [F] Scales
+	6 Normal
+		SUPPORTS: 1
+			0.499598 TAIL: 0
+	10 Protruding
+		SUPPORTS: 1
+			0.388002 TAIL: 1
+				10 [D] Dropsy 4 True
+	14 Missing Scales
+		SUPPORTS: 1
+			0.112401 TAIL: 0
+8 [F] Fins
+	6 Normal
+		SUPPORTS: 1
+			0.248745 TAIL: 0
+	18 Torn/frayed/eroded
+		SUPPORTS: 7
+			0.751255 TAIL: 3
+				19 [W] Water Condition 8 Alkaline
+				13 [D] Costiasis 4 True
+				7 [D] Rot 5 False
+			0.689398 TAIL: 3
+				19 [W] Water Condition 8 Alkaline
+				13 [D] Costiasis 5 False
+				7 [D] Rot 5 False
+			0.633731 TAIL: 3
+				19 [W] Water Condition 4 Acid
+				13 [D] Costiasis 4 True
+				7 [D] Rot 5 False
+			0.649536 TAIL: 3
+				19 [W] Water Condition 7 Neutral
+				13 [D] Costiasis 4 True
+				7 [D] Rot 5 False
+			0.637663 TAIL: 3
+				19 [W] Water Condition 8 Alkaline
+				13 [D] Costiasis 5 False
+				7 [D] Rot 4 True
+			0.501753 TAIL: 3
+				19 [W] Water Condition 4 Acid
+				13 [D] Costiasis 5 False
+				7 [D] Rot 4 True
+			0.453841 TAIL: 3
+				19 [W] Water Condition 7 Neutral
+				13 [D] Costiasis 5 False
+				7 [D] Rot 4 True
+15 [F] Body Growth
+	4 None
+		SUPPORTS: 1
+			0.392104 TAIL: 0
+	7 On head
+		SUPPORTS: 1
+			0.0620564 TAIL: 0
+	7 On body
+		SUPPORTS: 1
+			0.0979575 TAIL: 0
+	16 On head and body
+		SUPPORTS: 1
+			0.0698023 TAIL: 1
+				10 [D] Fungus 4 True
+	7 On fins
+		SUPPORTS: 1
+			0.0776913 TAIL: 0
+	16 On fins and body
+		SUPPORTS: 2
+			0.300388 TAIL: 1
+				14 [D] Columnaris 5 False
+			0.167191 TAIL: 1
+				14 [D] Columnaris 4 True
+8 [F] Skin
+	6 Normal
+		SUPPORTS: 1
+			0.310489 TAIL: 0
+	11 Heavy slime
+		SUPPORTS: 3
+			0.689511 TAIL: 3
+				11 [W] Nitrate 7 Present
+				13 [D] Costiasis 4 True
+				17 [W] Water Quality 4 Good
+			0.397163 TAIL: 3
+				11 [W] Nitrate 7 Present
+				13 [D] Costiasis 5 False
+				17 [W] Water Quality 4 Good
+			0.558923 TAIL: 3
+				11 [W] Nitrate 11 Not Present
+				13 [D] Costiasis 4 True
+				17 [W] Water Quality 4 Good
+	11 Moldy slime
+		SUPPORTS: 1
+			0.35063 TAIL: 1
+				17 [W] Water Quality 4 Poor
+14 [W] Fish waste
+	7 Present
+		SUPPORTS: 4
+			0.478348 TAIL: 2
+				19 [W] Ammonia 3-Level 8 Moderate
+				19 [W] pH Level >= 7.2 5 False
+			0.553183 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				19 [W] pH Level >= 7.2 5 False
+			0.37888 TAIL: 2
+				19 [W] Ammonia 3-Level 8 Moderate
+				19 [W] pH Level >= 7.2 4 True
+			0.447621 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				19 [W] pH Level >= 7.2 4 True
+	11 Not Present
+		SUPPORTS: 1
+			0.446817 TAIL: 0
+14 [F] Fish Color
+	6 Normal
+		SUPPORTS: 1
+			0.268342 TAIL: 0
+	22 Discolored - yellowish
+		SUPPORTS: 4
+			0.419441 TAIL: 2
+				19 [W] Water Condition 7 Neutral
+				10 [D] Velvet 4 True
+			0.368135 TAIL: 2
+				19 [W] Water Condition 4 Acid
+				10 [D] Velvet 4 True
+			0.302805 TAIL: 2
+				19 [W] Water Condition 4 Acid
+				10 [D] Velvet 5 False
+			0.237562 TAIL: 2
+				19 [W] Water Condition 8 Alkaline
+				10 [D] Velvet 4 True
+	20 Discolored - greyish
+		SUPPORTS: 1
+			0.0494308 TAIL: 0
+	10 Poor color
+		SUPPORTS: 2
+			0.262786 TAIL: 2
+				11 [W] Nitrate 7 Present
+				21 [W] Water Temperature 6 > 72 F
+			0.121305 TAIL: 2
+				11 [W] Nitrate 11 Not Present
+				21 [W] Water Temperature 6 > 72 F
+19 [F] Fish Appearance
+	7 Healthy
+		SUPPORTS: 1
+			0.455995 TAIL: 0
+	15 Swollen/bloated
+		SUPPORTS: 1
+			0.408061 TAIL: 1
+				10 [D] Dropsy 4 True
+	9 Thin/weak
+		SUPPORTS: 1
+			0.135944 TAIL: 0
+17 [F] Fish Behavior
+	6 Normal
+		SUPPORTS: 1
+			0.261749 TAIL: 0
+	8 Listless
+		SUPPORTS: 1
+			0.0391134 TAIL: 0
+	17 Darting movements
+		SUPPORTS: 3
+			0.266254 TAIL: 2
+				12 [W] Chlorine 11 Not Present
+				21 [D] Discus Head Worms 4 True
+			0.228597 TAIL: 2
+				12 [W] Chlorine 7 Present
+				21 [D] Discus Head Worms 4 True
+			0.17022 TAIL: 2
+				12 [W] Chlorine 7 Present
+				21 [D] Discus Head Worms 5 False
+	31 Scratching against tank objects
+		SUPPORTS: 4
+			0.39138 TAIL: 4
+				11 [D] Itching 4 True
+				20 [D] Ich (White Spot) 5 False
+				16 [D] Gyrodactylus 5 False
+				10 [D] Velvet 5 False
+			0.347894 TAIL: 4
+				16 [D] Gyrodactylus 4 True
+				11 [D] Itching 5 False
+				20 [D] Ich (White Spot) 5 False
+				10 [D] Velvet 5 False
+			0.284509 TAIL: 4
+				20 [D] Ich (White Spot) 4 True
+				11 [D] Itching 5 False
+				16 [D] Gyrodactylus 5 False
+				10 [D] Velvet 5 False
+			0.162819 TAIL: 4
+				10 [D] Velvet 4 True
+				11 [D] Itching 5 False
+				16 [D] Gyrodactylus 5 False
+				20 [D] Ich (White Spot) 5 False
+	21 Poor swimming ability
+		SUPPORTS: 1
+			0.0415035 TAIL: 0
+17 [W] Decaying Food
+	7 Present
+		SUPPORTS: 4
+			0.5802 TAIL: 2
+				19 [W] Ammonia 3-Level 8 Moderate
+				19 [W] pH Level >= 7.2 5 False
+			0.614934 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				19 [W] pH Level >= 7.2 5 False
+			0.532452 TAIL: 2
+				19 [W] Ammonia 3-Level 8 Moderate
+				19 [W] pH Level >= 7.2 4 True
+			0.434595 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				19 [W] pH Level >= 7.2 4 True
+	11 Not Present
+		SUPPORTS: 1
+			0.385066 TAIL: 0
+11 [D] Itching
+	4 True
+		SUPPORTS: 1
+			0.337472 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.662528 TAIL: 0
+7 [D] Rot
+	4 True
+		SUPPORTS: 1
+			0.124132 TAIL: 0
+	5 False
+		SUPPORTS: 1
+			0.767748 TAIL: 0
+15 [D] Saprolegnia
+	4 True
+		SUPPORTS: 1
+			0.3803 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.6197 TAIL: 0
+15 [D] Gill Flukes
+	4 True
+		SUPPORTS: 1
+			0.304467 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.695533 TAIL: 0
+16 [D] Gyrodactylus
+	4 True
+		SUPPORTS: 1
+			0.474446 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.525554 TAIL: 0
+21 [W] Water Temperature
+	11 (32 - 45] F
+		SUPPORTS: 1
+			0.104881 TAIL: 0
+	11 (45 - 65] F
+		SUPPORTS: 1
+			0.192035 TAIL: 0
+	11 (65 - 72] F
+		SUPPORTS: 1
+			0.332279 TAIL: 0
+	6 > 72 F
+		SUPPORTS: 1
+			0.370805 TAIL: 0
+9 [F] Spots
+	4 None
+		SUPPORTS: 1
+			0.301435 TAIL: 0
+	11 White spots
+		SUPPORTS: 1
+			0.650904 TAIL: 2
+				20 [D] Ich (White Spot) 4 True
+				14 [D] Black Spot 5 False
+	11 Black spots
+		SUPPORTS: 2
+			0.535585 TAIL: 3
+				14 [D] Black Spot 4 True
+				20 [D] Ich (White Spot) 5 False
+				21 [D] Ammonia Poisoning 5 False
+			0.289991 TAIL: 3
+				21 [D] Ammonia Poisoning 4 True
+				14 [D] Black Spot 5 False
+				20 [D] Ich (White Spot) 5 False
+	9 Red spots
+		SUPPORTS: 1
+			0.0476614 TAIL: 0
+10 [D] Dropsy
+	4 True
+		SUPPORTS: 4
+			0.461365 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				21 [F] Nitrite Poisoning 5 False
+			0.471358 TAIL: 2
+				21 [F] Nitrite Poisoning 4 True
+				19 [W] Ammonia 3-Level 8 Moderate
+			0.556086 TAIL: 2
+				21 [F] Nitrite Poisoning 4 True
+				19 [W] Ammonia 3-Level 8 None/Low
+			0.50134 TAIL: 2
+				19 [W] Ammonia 3-Level 4 High
+				21 [F] Nitrite Poisoning 4 True
+	5 False
+		SUPPORTS: 1
+			0.443914 TAIL: 0
+20 [D] Ich (White Spot)
+	4 True
+		SUPPORTS: 1
+			0.320679 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.679321 TAIL: 0
+10 [D] Velvet
+	4 True
+		SUPPORTS: 1
+			0.398555 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.601445 TAIL: 0
+13 [D] Costiasis
+	4 True
+		SUPPORTS: 1
+			0.401257 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.598743 TAIL: 0
+10 [D] Fungus
+	4 True
+		SUPPORTS: 1
+			0.487225 TAIL: 1
+				14 [F] Fish Color 20 Discolored - greyish
+	5 False
+		SUPPORTS: 1
+			0.512775 TAIL: 0
+17 [W] Water Quality
+	4 Good
+		SUPPORTS: 1
+			0.673736 TAIL: 6
+				17 [W] Ammonia Level 5 0 ppm
+				11 [W] Clarity 5 Clear
+				9 [W] Color 5 Clear
+				8 [W] Odor 4 None
+				14 [W] Chloromine 11 Not Present
+				11 [W] Nitrate 11 Not Present
+	4 Poor
+		SUPPORTS: 1
+			0.326264 TAIL: 0
+18 [D] Beta Finch Fin
+	4 True
+		SUPPORTS: 1
+			0.332254 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.667746 TAIL: 0
+14 [D] Black Spot
+	4 True
+		SUPPORTS: 1
+			0.195844 TAIL: 0
+	5 False
+		SUPPORTS: 1
+			0.784949 TAIL: 0
+14 [D] Columnaris
+	4 True
+		SUPPORTS: 1
+			0.111562 TAIL: 0
+	5 False
+		SUPPORTS: 1
+			0.656142 TAIL: 0
+16 [D] Dactylogyrus
+	4 True
+		SUPPORTS: 1
+			0.46431 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.53569 TAIL: 0
+21 [D] Discus Head Worms
+	4 True
+		SUPPORTS: 1
+			0.321051 TAIL: 1
+				13 [F] Parasites 7 Present
+	5 False
+		SUPPORTS: 1
+			0.678949 TAIL: 0
+19 [W] Nitrite 3-Level
+	8 None/Low
+		SUPPORTS: 1
+			1 TAIL: 1
+				17 [W] Nitrite Level 5 0 ppm
+	8 Moderate
+		SUPPORTS: 2
+			0.999429 TAIL: 1
+				17 [W] Nitrite Level 14 [.25 - .5) ppm
+			0.913173 TAIL: 1
+				17 [W] Nitrite Level 12 [.5 - 1) ppm
+	4 High
+		SUPPORTS: 3
+			0.851492 TAIL: 1
+				17 [W] Nitrite Level 11 [1 - 2) ppm
+			0.945232 TAIL: 1
+				17 [W] Nitrite Level 11 [2 - 3) ppm
+			1 TAIL: 1
+				17 [W] Nitrite Level 8 >= 3 ppm
+13 [F] Parasites
+	7 Present
+		SUPPORTS: 6
+			0.548703 TAIL: 3
+				16 [F] Stress Level 5 Major
+				19 [F] Fish Appearance 9 Thin/weak
+				17 [W] Water Quality 4 Poor
+			0.315973 TAIL: 3
+				16 [F] Stress Level 4 Mild
+				19 [F] Fish Appearance 9 Thin/weak
+				17 [W] Water Quality 4 Good
+			0.50959 TAIL: 3
+				16 [F] Stress Level 8 Moderate
+				19 [F] Fish Appearance 9 Thin/weak
+				17 [W] Water Quality 4 Good
+			0.533448 TAIL: 3
+				16 [F] Stress Level 5 Major
+				19 [F] Fish Appearance 9 Thin/weak
+				17 [W] Water Quality 4 Good
+			0.432017 TAIL: 3
+				16 [F] Stress Level 4 Mild
+				17 [W] Water Quality 4 Poor
+				19 [F] Fish Appearance 9 Thin/weak
+			0.385675 TAIL: 3
+				16 [F] Stress Level 8 Moderate
+				19 [F] Fish Appearance 9 Thin/weak
+				17 [W] Water Quality 4 Poor
+	11 Not Present
+		SUPPORTS: 1
+			0.451297 TAIL: 0
+
+
+FREE_SUPPORTS:

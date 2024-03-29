@@ -1,0 +1,229 @@
+{
+ "Name": "Tsunami Evidence",
+ "Instantiation Nodes": {
+  "(B) Tsunami just occurred": [
+   "No",
+   "Yes"
+  ],
+  "(B) Tsunami is destructive": [
+   "No",
+   "Yes"
+  ],
+  "(B) Has fishing equipment": [
+   "No",
+   "Yes"
+  ],
+  "(B) Has (access to) a (fishing) boat": [
+   "No",
+   "Yes"
+  ],
+  "(B) Fishing livelihood is threatened": [
+   "No",
+   "Yes"
+  ]
+ },
+ "Support Nodes": [
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "No"
+   },
+   "Probability": 0.15,
+   "Tail": {
+    "(B) Has fishing equipment": "Yes",
+    "(B) Has (access to) a (fishing) boat": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Tsunami is destructive": "No"
+   },
+   "Probability": 0.99,
+   "Tail": {
+    "(B) Tsunami just occurred": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "No"
+   },
+   "Probability": 0.01,
+   "Tail": {
+    "(B) Has fishing equipment": "No",
+    "(B) Has (access to) a (fishing) boat": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   },
+   "Probability": 0.2,
+   "Tail": {
+    "(B) Has fishing equipment": "Yes",
+    "(B) Has (access to) a (fishing) boat": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   },
+   "Probability": 0.99,
+   "Tail": {
+    "(B) Has fishing equipment": "No",
+    "(B) Has (access to) a (fishing) boat": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Tsunami is destructive": "No"
+   },
+   "Probability": 0.2,
+   "Tail": {
+    "(B) Tsunami just occurred": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "No"
+   },
+   "Probability": 0.9,
+   "Tail": {
+    "(B) Tsunami is destructive": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Tsunami is destructive": "Yes"
+   },
+   "Probability": 0.01,
+   "Tail": {
+    "(B) Tsunami just occurred": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Tsunami just occurred": "No"
+   },
+   "Probability": 0.0,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Has (access to) a (fishing) boat": "No"
+   },
+   "Probability": 0.1,
+   "Tail": {
+    "(B) Tsunami is destructive": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   },
+   "Probability": 0.85,
+   "Tail": {
+    "(B) Has fishing equipment": "Yes",
+    "(B) Has (access to) a (fishing) boat": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has (access to) a (fishing) boat": "No"
+   },
+   "Probability": 0.6,
+   "Tail": {
+    "(B) Tsunami is destructive": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "No"
+   },
+   "Probability": 0.8,
+   "Tail": {
+    "(B) Has fishing equipment": "Yes",
+    "(B) Has (access to) a (fishing) boat": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "No"
+   },
+   "Probability": 0.01,
+   "Tail": {
+    "(B) Tsunami is destructive": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "No"
+   },
+   "Probability": 0.45,
+   "Tail": {
+    "(B) Has fishing equipment": "No",
+    "(B) Has (access to) a (fishing) boat": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Fishing livelihood is threatened": "Yes"
+   },
+   "Probability": 0.55,
+   "Tail": {
+    "(B) Has fishing equipment": "No",
+    "(B) Has (access to) a (fishing) boat": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "Yes"
+   },
+   "Probability": 0.99,
+   "Tail": {
+    "(B) Tsunami is destructive": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Tsunami just occurred": "Yes"
+   },
+   "Probability": 1.0,
+   "Tail": {}
+  },
+  {
+   "Head": {
+    "(B) Has (access to) a (fishing) boat": "Yes"
+   },
+   "Probability": 0.9,
+   "Tail": {
+    "(B) Tsunami is destructive": "No"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has fishing equipment": "Yes"
+   },
+   "Probability": 0.1,
+   "Tail": {
+    "(B) Tsunami is destructive": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Tsunami is destructive": "Yes"
+   },
+   "Probability": 0.8,
+   "Tail": {
+    "(B) Tsunami just occurred": "Yes"
+   }
+  },
+  {
+   "Head": {
+    "(B) Has (access to) a (fishing) boat": "Yes"
+   },
+   "Probability": 0.4,
+   "Tail": {
+    "(B) Tsunami is destructive": "Yes"
+   }
+  }
+ ]
+}
